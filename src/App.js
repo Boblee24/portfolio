@@ -13,7 +13,7 @@ import { AnimatePresence } from "framer-motion";
 function App() {
   const location = useLocation();
   return (
-    <div className="App">
+    <div className="App bg-slate-500">
       <Header />
       <AnimatePresence>
         <Routes location={location} key={location.pathname}>
