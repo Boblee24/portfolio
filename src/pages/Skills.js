@@ -10,7 +10,7 @@ const Skills = () => {
   }
   const skills = () => {
     return (
-      <div className="">
+      <div className="grid grid-cols-3">
         {
           Languages.map((Language) => (
             <div>
@@ -29,7 +29,7 @@ const Skills = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div className="flex justify-between w-full h-full">
+      <div className="flex justify-between w-full h-full items-center p-[]">
         <h1>My Skills</h1>
         <div>
           {skills()}
