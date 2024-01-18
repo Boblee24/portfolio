@@ -29,7 +29,7 @@ const Skills = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div>
+      <div className="flex justify-between w-full h-full">
         <h1>My Skills</h1>
         <div>
           {skills()}

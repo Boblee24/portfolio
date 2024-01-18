@@ -4,16 +4,16 @@ import { motion } from "framer-motion";
 const About = () => {
   return (
     <motion.div
-      className="home"
+      className=" h-[100dvh] flex justify-center items-center"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div>
-        <div>
+      <div className="px-[3%] flex justify-between w-[100%] ">
+        <div className="w-[50%] text-center">
           <h2>About Me</h2>
         </div>
-        <div>
+        <div className="w-[60%]">
           <p>
             Hi there! I'm Aborisade Ayomiposi, a passionate frontend web
             developer based in [Your Location]. With a creative mindset and a
