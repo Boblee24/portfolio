@@ -1,0 +1,42 @@
+{
+    "languages" : [
+    {
+      "id": 1,
+      "name": "HTML",
+      "image": "type.png",
+      "level": "Beginner"
+    },
+    {
+      "id": 2,
+      "name": "SASS",
+      "image": "sass.png",
+      "level": "Beginner"
+    },
+    {
+      "id": 3,
+      "name": "Javascript",
+      "image": "java.png",
+      "level": "Beginner"
+    },
+    {
+      "id": 4,
+      "name": "CSS",
+      "image": "css.png",
+      "level": "Beginner"
+    },
+    {
+      "id": 4,
+      "name": "tailwind",
+      "image": "tailwind.png",
+      "level": "Beginner"
+    },
+    {
+      "id": 4,
+      "name": "Git",
+      "image": "git.png",
+      "level": "Beginner"
+    }
+    
+  ]
+}
+  
