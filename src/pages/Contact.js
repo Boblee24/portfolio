@@ -10,7 +10,7 @@ const Contact = () => {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
       >
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between w-full items-center">
           <h1>Contact </h1>
           <div>
             <div>
