@@ -1,10 +1,30 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
+import { AppContext } from "../App";
 
 const Skills = () => {
+  const { Languages } = useContext(AppContext)
+  const imageFunc = (string) => {
+    const image = require(`../assts/${string}`)
+    return image
+  }
+  const skills = () => {
+    return (
+      <div className="">
+        {
+          Languages.map((Language) => (
+            <div>
+              <img src={imageFunc(Language.image)} alt={Language.name}/>
+            <h1>{Language.name}</h1>
+            </div>
+          ))
+        }
+      </div>
+    )
+  }
   return (
     <motion.div
-      className="helloshit"
+      className="helloshit h-[100dvh] flex justify-center items-center"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -12,16 +32,8 @@ const Skills = () => {
       <div>
         <h1>My Skills</h1>
         <div>
-          <div>
-            <img src="path/to/html-logo.png" alt="HTML Logo" />
+          {skills()}
           </div>
-          <div>
-            <img src="path/to/css-logo.png" alt="CSS Logo" />
-          </div>
-          <div>
-            <img src="path/to/javascript-logo.png" alt="JavaScript Logo" />
-          </div>
-        </div>
       </div>
     </motion.div>
   );

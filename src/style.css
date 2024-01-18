@@ -1,3 +1,10 @@
 .sidebar {
     writing-mode: vertical-lr;
 }
+.home {
+    background: #000000;
+    clip-path: polygon(46% 0, 100% 0%, 100% 100%, 36% 100%);
+    position: absolute;
+    /* z-index: -1; */
+    
+}

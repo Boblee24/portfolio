@@ -11,6 +11,7 @@ import Projects from "./pages/Projects";
 import { AnimatePresence } from "framer-motion";
 import Sidebar from "./components/Sidebar";
 import { createContext } from "react";
+import LanguagesArray from "./data.json"
 
 export const AppContext = createContext();
 function App() {
@@ -18,6 +19,7 @@ function App() {
   const capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
+  const Languages = LanguagesArray.languages
   const currentRoute = capitalizeFirstLetter(location.pathname.slice(1));
   const date = new Date()
   const day = date.getDate()
@@ -26,8 +28,8 @@ function App() {
   const todayDate = `${day}/${month}/${year}`
 
   return (
-    <div className="App bg-slate-500 ">
-      <AppContext.Provider value={{ currentRoute, todayDate }}>
+    <div className="App bg-[#d7d7d7] ">
+      <AppContext.Provider value={{ currentRoute, todayDate, year, Languages }}>
         <Header />
         <Sidebar />
         <AnimatePresence>

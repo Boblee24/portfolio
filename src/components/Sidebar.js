@@ -5,10 +5,10 @@ import { AppContext } from '../App'
 const Sidebar = () => {
     const {currentRoute, todayDate} = useContext(AppContext)
   return (
-    <div className=' sidebar fixed flex'>
-        <h1>Hello,thisis the sidebar</h1>
-        <h2>{currentRoute === "" ? "Home" : currentRoute}</h2>
-        <h3>{todayDate}</h3>
+    <div className=' sidebar fixed flex justify-around h-full pl-3'>
+        {/* <h1>Hello,thisis the sidebar</h1> */}
+        <h2 className='font-semibold text-[1.2rem] opacity-55'>{currentRoute === "" ? "Home" : currentRoute}</h2>
+        <h3 className='font-semibold text-[1.2rem]'>{todayDate}</h3>
     </div>
   )
 }
