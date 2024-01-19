@@ -28,7 +28,7 @@ function App() {
   const todayDate = `${day}/${month}/${year}`
 
   return (
-    <div className="App bg-[#d7d7d7] z-[0]">
+    <div className="App ">
       <AppContext.Provider value={{ currentRoute, todayDate, year, Languages }}>
         <Header />
         <Sidebar />
