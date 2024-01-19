@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom'
 
 const Header = () => {
   return (
-    <div className='header fixed flex justify-between w-full p-4 z-10'>
+    <div className='header fixed flex justify-between w-full p-4 z-10 bg-slate-400'>
         <h1><Link className="text-[1rem]" to='/'>Ayomi</Link></h1>
         <div className='w-[55%]'>
             <ul className='flex justify-around w-full '>
