@@ -33,8 +33,11 @@ const Contact = () => {
             };
             const getIcon = iconComponent(contact.icon);
             return (
-              <div className=" parent group hover:scale-110 duration-700" key={contact.id}>
-                <div className=" hello group-hover:bg-white duration-700  ease-in-out transition  "></div>
+              <div
+                className=" parent group hover:scale-110 duration-700"
+                key={contact.id}
+              >
+                {/* <div className=" hello group-hover:bg-white duration-700  ease-in-out transition  "></div> */}
                 <div className="flex">
                   {getIcon}
                   <h3>{contact.name}</h3>
