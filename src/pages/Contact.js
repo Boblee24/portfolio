@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
-import { MdOutlineMail } from "react-icons/md";
+// import { MdOutlineMail } from "react-icons/md";
+import { AppContext } from "../App";
 
 const Contact = () => {
+  const { Contacts } = useContext(AppContext);
   return (
     <motion.div
       className="h-[100dvh] flex justify-center items-center z-0"
@@ -12,40 +14,23 @@ const Contact = () => {
     >
       <div className="flex justify-between w-full items-center p-[5%]">
         <h1>Contact </h1>
-        <div className="">
-          <div className=" parent ">
-            <div className=" hello"></div>
-            <div>
-              <MdOutlineMail />
-              <h3>Email</h3>
-            </div>
-            <h4>Username</h4>
-            <button>Visit the link broooo</button>
-          </div>
-          <div>
-            <div>
-              <MdOutlineMail />
-              <h3>Github</h3>
-            </div>
-            <h4>Username</h4>
-            <button>Visit the link broooo</button>
-          </div>
-          <div>
-            <div>
-              <MdOutlineMail />
-              <h3>Twitter</h3>
-            </div>
-            <h4>Username</h4>
-            <button>Visit the link broooo</button>
-          </div>
-          <div>
-            <div>
-              <MdOutlineMail />
-              <h3>LinkedIn</h3>
-            </div>
-            <h4>Username</h4>
-            <button>Visit the link broooo</button>
-          </div>
+        <div className=" grid-cols-2 grid gap-10">
+          {Contacts.map((contact) => { 
+            const iconComponent = () => {
+              
+            }
+            (
+              <div className=" parent ">
+                <div className=" hello"></div>
+                <div>
+                  {contact.icon}
+                  <h3>{contact.name}</h3>
+                </div>
+                <h4>{contact.username}</h4>
+                <button>Visit the link broooo</button>
+              </div>
+            )}
+          )}
         </div>
       </div>
     </motion.div>

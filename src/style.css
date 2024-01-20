@@ -8,8 +8,8 @@
     height: 100%;
     background: blue;
     z-index: -10;
-    left: 2rem;
-    top: 3rem;
+    left: 1.5rem;
+    top: 1.5rem;
 }
 .parent {
     background: red;

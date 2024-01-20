@@ -1,5 +1,5 @@
 {
-    "languages" : [
+  "languages": [
     {
       "id": 1,
       "name": "HTML",
@@ -54,8 +54,36 @@
       "image": "git.png",
       "level": "Beginner"
     }
-    
   ],
-  "$schema": []
+  "contact": [
+    {
+      "id": 1,
+      "icon" :"<MdOutlineMail />",
+      "name": "Email",
+      "url": "url",
+      "Username": "This is the Username"
+    },
+    {
+      "id": 2,
+      "icon" :"<MdOutlineMail />" ,
+      "name": "LinkedIn",
+      "url": "url",
+      "Username": "This is the Username"
+    },
+    {
+      "id":3,
+      "icon" :"<MdOutlineMail />" ,
+
+      "name": "Twitter",
+      "url": "url",
+      "Username": "This is the Username"
+    },
+    {
+      "id":4,
+      "icon" :"<MdOutlineMail />" ,
+      "name": "Github",
+      "url": "url",
+      "Username": "This is the Username"
+    }
+  ]
 }
-  
