@@ -58,32 +58,31 @@
   "contact": [
     {
       "id": 1,
-      "icon" :"<MdOutlineMail />",
+      "icon" :"MdOutlineMail",
       "name": "Email",
       "url": "url",
-      "Username": "This is the Username"
+      "username": "This is the Username"
     },
     {
       "id": 2,
-      "icon" :"<MdOutlineMail />" ,
+      "icon" :"LinkedIn" ,
       "name": "LinkedIn",
       "url": "url",
-      "Username": "This is the Username"
+      "username": "This is the Username"
     },
     {
       "id":3,
-      "icon" :"<MdOutlineMail />" ,
-
+      "icon" :"Twitter" ,
       "name": "Twitter",
       "url": "url",
-      "Username": "This is the Username"
+      "username": "This is the Username"
     },
     {
       "id":4,
-      "icon" :"<MdOutlineMail />" ,
+      "icon" :"Github" ,
       "name": "Github",
       "url": "url",
-      "Username": "This is the Username"
+      "username": "This is the Username"
     }
   ]
 }

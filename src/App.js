@@ -19,7 +19,8 @@ function App() {
   const capitalizeFirstLetter = (string) => {
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
-  const Languages = LanguagesArray.languages
+  const Languages = LanguagesArray.languages;
+  const Contacts = LanguagesArray.contact;
   const currentRoute = capitalizeFirstLetter(location.pathname.slice(1));
   const date = new Date()
   const day = date.getDate()
@@ -29,7 +30,7 @@ function App() {
 
   return (
     <div className="App ">
-      <AppContext.Provider value={{ currentRoute, todayDate, year, Languages }}>
+      <AppContext.Provider value={{ currentRoute, todayDate, year, Languages, Contacts }}>
         <Header />
         <Sidebar />
         <AnimatePresence>
