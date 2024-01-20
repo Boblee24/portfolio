@@ -10,8 +10,7 @@
     position: relative;
     z-index: 10000;
 }
-.parent::after {
-    content: "";
+.hello {
     position: absolute;
     width: 100%;
     height: 100%;

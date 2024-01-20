@@ -37,13 +37,15 @@ const Contact = () => {
                 className=" parent group hover:scale-110 duration-700"
                 key={contact.id}
               >
-                {/* <div className=" hello group-hover:bg-white duration-700  ease-in-out transition  "></div> */}
-                <div className="flex">
-                  {getIcon}
-                  <h3>{contact.name}</h3>
+                <div className=" hello group-hover:bg-white duration-700  ease-in-out transition  "></div>
+                <div className="z-1 bg-slate-300 h-full">
+                  <div className="flex this">
+                    {getIcon}
+                    <h3>{contact.name}</h3>
+                  </div>
+                  <h4>{contact.username}</h4>
+                  <button>Visit the link broooo</button>
                 </div>
-                <h4>{contact.username}</h4>
-                <button>Visit the link broooo</button>
               </div>
             );
           })}
