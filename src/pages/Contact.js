@@ -37,7 +37,7 @@ const Contact = () => {
                 className=" parent group hover:scale-110 duration-700"
                 key={contact.id}
               >
-                <div className=" hello group-hover:bg-white duration-700  ease-in-out transition  "></div>
+                <div className=" hello group-hover:bg-white duration-700  ease-in-out transition omoo "></div>
                 <div className="z-1 bg-slate-300 h-full">
                   <div className="flex this">
                     {getIcon}
