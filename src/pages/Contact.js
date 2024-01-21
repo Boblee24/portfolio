@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { MdOutlineMail } from "react-icons/md";
 import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
 import { AppContext } from "../App";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   const { Contacts } = useContext(AppContext);
@@ -14,7 +15,7 @@ const Contact = () => {
       exit={{ opacity: 0 }}
     >
       <div className="flex justify-between w-full items-center p-[5%]">
-        <h1>Contact </h1>
+        <h1 className="text-[2.5rem] font-semibold border-l-2 border-black border-b-2 leading-[2.2rem] pb-2 pl-2">Contact </h1>
         <div className=" grid-cols-2 grid gap-[6rem]">
           {Contacts.map((contact) => {
             const iconComponent = (thatIcon) => {
@@ -44,7 +45,7 @@ const Contact = () => {
                     <h3 className="text-[1.4rem] font-semibold">{contact.name}</h3>
                   </div>
                   <h4 className="italic font-semibold">{contact.username}</h4>
-                  <a href={contact.url} className="self-start py-2 px-4 bg-black text-[#808080] hover:animate-[]">Visit &rarr;</a>
+                  <Link href="https://news.google.com" className="self-start py-2 px-4 bg-black text-[#808080] hover:animate-[]">Visit &rarr;</Link>
                 </div>
               </div>
             );

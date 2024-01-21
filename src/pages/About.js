@@ -9,14 +9,14 @@ const About = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div className="px-[3%] flex justify-between w-[100%] ">
-        <div className="w-[50%] text-center">
-          <h2>About Me</h2>
+      <div className="px-[3%] flex justify-between items-center w-[100%] ">
+        <div className=" text-center">
+          <h2 className="text-[2.5rem] font-semibold border-l-2 border-black border-b-2 leading-[2.2rem] pb-2 pl-2">About Me</h2>
         </div>
         <div className="w-[60%]">
-          <p>
-            Hi there! I'm Aborisade Ayomiposi, a passionate frontend web
-            developer based in [Your Location]. With a creative mindset and a
+          <p className="text-[1.1rem]"> 
+            Hi there! I'm <span className="font-semibold">Aborisade Ayomiposi</span>, a passionate frontend web
+            developer based in Nigeria. With a creative mindset and a
             love for technology, I specialize in crafting delightful user
             experiences on the web using React.js, TypeScript, Tailwind CSS, and
             JavaScript. My skills include proficiency in HTML5 and CSS3 for

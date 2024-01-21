@@ -50,6 +50,24 @@
     },
     {
       "id": 4,
+      "name": "CSS",
+      "image": "css.png",
+      "level": "Beginner"
+    },
+    {
+      "id": 4,
+      "name": "tailwind",
+      "image": "tailwind.png",
+      "level": "Beginner"
+    },
+    {
+      "id": 4,
+      "name": "tailwind",
+      "image": "tailwind.png",
+      "level": "Beginner"
+    },
+    {
+      "id": 4,
       "name": "Git",
       "image": "git.png",
       "level": "Beginner"
