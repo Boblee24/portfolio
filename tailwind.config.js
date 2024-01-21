@@ -1,3 +1,4 @@
+const defaultTheme = require("tailwindcss/defaultTheme")
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -10,6 +11,15 @@ module.exports = {
           '0%, 100%': { transform: 'rotate(-3deg)' },
           '50%': { transform: 'rotate(3deg)' },
         }
+      },
+      screens : {
+        xs:"475px",
+        dm: "830px", 
+        xdm: "950px",
+        ...defaultTheme.screens
+      },
+      colors : {
+        'primary-blue': '#074C83',
       }
     },
   },
