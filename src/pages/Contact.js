@@ -44,7 +44,7 @@ const Contact = () => {
                     <h3 className="text-[1.4rem]">{contact.name}</h3>
                   </div>
                   <h4 className="italic">{contact.username}</h4>
-                  <a href={contact.url} className="self-start py-2 px-4 bg-black text-[#808080]">Visit &rarr;</a>
+                  <a href={contact.url} className="self-start py-2 px-4 bg-black text-[#808080] hover:animate-[]">Visit &rarr;</a>
                 </div>
               </div>
             );
