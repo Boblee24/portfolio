@@ -41,9 +41,9 @@ const Contact = () => {
                 <div className="z-1 border-b-2 border-l-2 p-4 border-black h-full gap-2 bg-[#b0b0b0] flex flex-col ">
                   <div className="flex gap-2">
                     <div className="">{getIcon}</div>
-                    <h3 className="text-[1.4rem]">{contact.name}</h3>
+                    <h3 className="text-[1.4rem] font-semibold">{contact.name}</h3>
                   </div>
-                  <h4 className="italic">{contact.username}</h4>
+                  <h4 className="italic font-semibold">{contact.username}</h4>
                   <a href={contact.url} className="self-start py-2 px-4 bg-black text-[#808080] hover:animate-[]">Visit &rarr;</a>
                 </div>
               </div>
