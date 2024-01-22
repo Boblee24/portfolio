@@ -27,7 +27,7 @@ function App() {
   const month = date.getMonth() + 1
   const year = date.getFullYear()
   const todayDate = `${day}/${month}/${year}`
-  const [toggle, setToggle] = useState(true)
+  const [toggle, setToggle] = useState(false)
     const toggleClick = () =>{
         setToggle((prev) => !prev)
     }

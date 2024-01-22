@@ -4,17 +4,17 @@ import { motion } from "framer-motion";
 const About = () => {
   return (
     <motion.div
-      className=" h-[100dvh] flex justify-center items-center"
+      className=" flex justify-center items-center"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div className="px-[3%] flex justify-between items-center w-[100%] ">
-        <div className=" text-center">
-          <h2 className="text-[2.5rem] font-semibold border-l-2 border-black border-b-2 leading-[2.2rem] pb-2 pl-2">About Me</h2>
+      <div className=" flex  w-[100%] ">
+        <div className=" bg-red-300 fixed" >
+          <h2 className="text-[2.5rem] font-semibold border-l-2 border-black border-b-2 leading-[1rem] ml-2 mt-[5rem] pb-4 pl-4 self-start fixed ">About Me</h2>
         </div>
-        <div className="w-[60%]">
-          <p className="text-[1.1rem]"> 
+        <div className="">
+          <p className="text-[1.1rem] p-3 mt-[8rem] "> 
             Hi there! I'm <span className="font-semibold">Aborisade Ayomiposi</span>, a passionate frontend web
             developer based in Nigeria. With a creative mindset and a
             love for technology, I specialize in crafting delightful user

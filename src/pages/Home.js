@@ -13,7 +13,7 @@ const Home = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div className="w-full h-full home"></div>
+      <div className="w-full h-full home hidden"></div>
       <div className="flex absolute justify-between w-full px-[4%] items-center">
         <div className="text-center">
           <h2 className="text-[2rem]">HELLO, I'm</h2>
@@ -26,7 +26,7 @@ const Home = () => {
             Contact me
           </button>
         </div>
-        <div className="max-w-[500px] h-[500px]">
+        <div className="max-w-[500px] h-[500px] hidden">
           <img
             src={myImage3}
             className="w-full h-full border-2 border-zinc-200"

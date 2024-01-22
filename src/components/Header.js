@@ -1,5 +1,7 @@
 import React, { useContext } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import { MdOutlineMail } from "react-icons/md";
+import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
 import Harmbuger from './harmbuger'
 import { AppContext } from '../App'
 
@@ -18,6 +20,13 @@ const Header = () => {
                 <li><NavLink onClick={toggleClick} className='' to="/skills">Skills</NavLink></li>
                 <li><NavLink onClick={toggleClick} className='' to="/contact">Contact</NavLink></li>
             </ul>
+            <ul className='flex flex-col p-3 gap-5'>
+        <li><Link to=""><MdOutlineMail className='text-[black]' size={25}/></Link></li>
+        <li><Link to="https://github.com/Boblee24"><FaGithub className='text-[black]' size={25}/>     </Link></li>
+        <li><Link to=""><FaLinkedin className='text-[black]' size={25}/>   </Link></li>
+        <li><Link to=""><FaTwitter className='text-[black]' size={25}/>    </Link></li>
+        <li><Link to=""><FaLinkedin className='text-[black]' size={25}/>   </Link></li>
+      </ul>
         </div>
     </div>
   )
