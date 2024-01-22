@@ -15,7 +15,7 @@ const Contact = () => {
       exit={{ opacity: 0 }}
     >
       <div className="flex justify-center w-full px-2">
-        <div className=" bg-[#d7d7d7] w-full z-30 fixed top-[4rem]">
+        <div className=" bg-[#d7d7d7] w-full z-30 fixed top-[3.5rem]">
           <h1 className="text-[2.5rem] border-l-2 border-b-2 leading-9 border-black  inline-block font-semibold mx-2">
             Contact
           </h1>
@@ -52,7 +52,7 @@ const Contact = () => {
                   </div>
                   <h4 className="italic font-semibold">{contact.username}</h4>
                   <Link
-                    href="https://news.google.com"
+                    to="https://news.google.com"
                     className="self-start py-2 px-4 bg-black text-[#808080] hover:animate-[]"
                   >
                     Visit &rarr;

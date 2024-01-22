@@ -1,17 +1,19 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import Harmbuger from './harmbuger'
 
 const Header = () => {
   return (
-    <div className='header fixed flex justify-between w-full p-4 z-10 bg-[#d7d7d7]'>
+    <div className='header fixed flex w-full p-3 z-10 bg-[#d7d7d7]'>
         <h1><Link className="text-[1.5rem] font-semibold" to='/'>AYOMI</Link></h1>
-        <div className='w-[55%]'>
-            <ul className='hidden justify-around w-full '>
-                <li><NavLink className='text-white' to="/">Home</NavLink></li>
-                <li><NavLink className='text-white' to="/about">About</NavLink></li>
-                <li><NavLink className='text-white' to="/projects">Projects</NavLink></li>
-                <li><NavLink className='text-white' to="/skills">Skills</NavLink></li>
-                <li><NavLink className='text-white' to="/contact">Contact</NavLink></li>
+        <Harmbuger/>
+        <div className=' absolute bg-[#d7d7d7] h-[100vh] w-full'>
+            <ul className=' justify-around w-full flex gap-5 flex-col p-3 pt-[2rem] items-center text-[2rem] text-black '>
+                <li><NavLink className='' to="/">Home</NavLink></li>
+                <li><NavLink className='' to="/about">About</NavLink></li>
+                <li><NavLink className='' to="/projects">Projects</NavLink></li>
+                <li><NavLink className='' to="/skills">Skills</NavLink></li>
+                <li><NavLink className='' to="/contact">Contact</NavLink></li>
             </ul>
         </div>
     </div>
