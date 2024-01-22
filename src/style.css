@@ -54,6 +54,12 @@ button.button-three {
   color: red;
   text-decoration: line-through;
 }
+.untranslated { 
+  transform: translateX(-100%);
+}
+.translated {
+  transform: translateX(0%);
+}
 /* .parent:hover .parent::after{
     z-index: 0;
 } */

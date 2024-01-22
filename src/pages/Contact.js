@@ -15,7 +15,7 @@ const Contact = () => {
       exit={{ opacity: 0 }}
     >
       <div className="flex justify-center w-full px-2">
-        <div className=" bg-[#d7d7d7] w-full z-30 fixed top-[3.5rem]">
+        <div className=" bg-[#d7d7d7] w-full z-10 fixed top-[3.5rem]">
           <h1 className="text-[2.5rem] border-l-2 border-b-2 leading-9 border-black  inline-block font-semibold mx-2">
             Contact
           </h1>

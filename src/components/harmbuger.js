@@ -1,13 +1,11 @@
-import { useState } from "react"
+import { useContext } from "react"
 import "../style.css"
+import { AppContext } from "../App"
 
 
 const Harmbuger = (props) => {
-    const [toggle, setToggle] = useState(false)
-    const toggleClick = () =>{
-        setToggle((prev) => !prev)
-    }
-
+    const {toggle, toggleClick} = useContext(AppContext)
+    
   return (
     <div className=' fixed right-0 top-2 z-20  md:hidden'>
         {/* <Heading handleHarmbugerclick={props.handleHarmbugerclick} toggle ={props.toggle}/> */}

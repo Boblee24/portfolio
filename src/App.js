@@ -10,7 +10,7 @@ import Footer from "./pages/Footer";
 import Projects from "./pages/Projects";
 import { AnimatePresence } from "framer-motion";
 import Sidebar from "./components/Sidebar";
-import { createContext } from "react";
+import { createContext, useState } from "react";
 import LanguagesArray from "./data.json"
 
 export const AppContext = createContext();
@@ -27,10 +27,14 @@ function App() {
   const month = date.getMonth() + 1
   const year = date.getFullYear()
   const todayDate = `${day}/${month}/${year}`
+  const [toggle, setToggle] = useState(true)
+    const toggleClick = () =>{
+        setToggle((prev) => !prev)
+    }
 
   return (
     <div className="App ">
-      <AppContext.Provider value={{ currentRoute, todayDate, year, Languages, Contacts }}>
+      <AppContext.Provider value={{ currentRoute, todayDate, year, Languages, Contacts, toggle, toggleClick }}>
         <Header />
         <Sidebar />
         <AnimatePresence>
