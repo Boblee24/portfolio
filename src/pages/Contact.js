@@ -9,13 +9,13 @@ const Contact = () => {
   const { Contacts } = useContext(AppContext);
   return (
     <motion.div
-      className="h-[100dvh] flex justify-center items-center z-0"
+      className=" xdm:h-[100dvh] flex justify-center items-center pt-[3rem] "
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div className="flex justify-between w-full items-center p-[5%]">
-        <h1 className="text-[2.5rem] font-semibold border-l-2 border-black border-b-2 leading-[2.2rem] pb-2 pl-2">Contact </h1>
+      <div className="flex justify-between flex-col w-full  p-[5%] xdm:flex-row gap-9  ">
+        <h1 className="text-[2.5rem] font-semibold border-l-2 border-black border-b-2 leading-[2.2rem] pb-2 pl-2 self-start">Contact </h1>
         <div className=" grid-cols-2 grid gap-[6rem]">
           {Contacts.map((contact) => {
             const iconComponent = (thatIcon) => {

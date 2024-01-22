@@ -15,7 +15,7 @@ module.exports = {
       screens : {
         xs:"475px",
         dm: "830px", 
-        xdm: "950px",
+        xdm: "990px",
         ...defaultTheme.screens
       },
       colors : {
