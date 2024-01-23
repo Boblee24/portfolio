@@ -21,6 +21,7 @@ function App() {
   };
   const Languages = LanguagesArray.languages;
   const Contacts = LanguagesArray.contact;
+  const myProjects = LanguagesArray.projct
   const currentRoute = capitalizeFirstLetter(location.pathname.slice(1));
   const date = new Date()
   const day = date.getDate()
@@ -52,7 +53,7 @@ function App() {
             <Route path="skills" key="Skills" element={<Skills />} />
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
-            <Route path="projects" element={<Projects />} />
+            <Route path="projects" element={<Projects myProjects={myProjects} />} />
             <Route path="*" element={<h1> PAGE NOT FOUND</h1>} />
           </Routes>
         </AnimatePresence>
