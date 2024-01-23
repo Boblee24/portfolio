@@ -10,8 +10,8 @@ const About = () => {
       exit={{ opacity: 0 }}
     >
       <div className=" flex  w-[100%] ">
-        <div className=" bg-red-300 fixed" >
-          <h2 className="text-[2.5rem] font-semibold border-l-2 border-black border-b-2 leading-[1rem] ml-2 mt-[5rem] pb-4 pl-4 self-start fixed ">About Me</h2>
+        <div className=" bg-[#D7D7D7] z-10 fixed top-4 w-full pb-3" >
+          <h2 className="text-[2.5rem] inline-block font-semibold border-l-2 border-black border-b-2 leading-[1rem] ml-2 mt-[5rem] pb-4 pl-4 self-start ">About Me</h2>
         </div>
         <div className="">
           <p className="text-[1.1rem] p-3 mt-[8rem] "> 

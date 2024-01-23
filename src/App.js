@@ -31,7 +31,16 @@ function App() {
     const toggleClick = () =>{
         setToggle((prev) => !prev)
     }
-
+    // const person = {
+    //   firstname: 'Ayomiposi',
+    //   sayHi: function () {
+    //     console.log(`Hi, ${this.firstname}`);
+    //   },
+    // };
+    
+    // const greet = person.sayHi.bind(person);
+    // greet(); // Outputs: Hi, Ayomiposi
+    
   return (
     <div className="App ">
       <AppContext.Provider value={{ currentRoute, todayDate, year, Languages, Contacts, toggle, toggleClick }}>
