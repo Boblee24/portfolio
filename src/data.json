@@ -106,19 +106,20 @@
   "projct" : [
     {
       "id":1,
-      "img": null,
+      "img": "about.png",
       "stack" :"tailwindcss" ,
       "name": "Tradiant",
       "url": "url",
-      "Dscrition": "This is the Username"
+      "description": "Dynamic stock tracking app with real-time data, blog insights, and user-friendly tools for informed investment decisions"
+
     },
     {
       "id":2,
-      "img": null,
+      "img": "about.png",
       "stack" :"tailwindcss" ,
       "name": "Quizzical",
       "url": "url",
-      "Dscrition": "This is the Username"
+      "description": " Engaging quiz app for knowledge enthusiasts. Features diverse categories, scoring, and interactive challenges for an entertaining learning experience."
     }
   ]
 }
