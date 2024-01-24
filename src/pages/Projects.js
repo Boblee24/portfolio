@@ -1,4 +1,6 @@
 import React from "react";
+import { FaGithub } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Projects = (props) => {
   const imageFunc = (string) => {
@@ -21,19 +23,22 @@ const Projects = (props) => {
   //           onMouseLeave={handleMouseLeave}
   const MyProject = () => {
     return (
-      <div className="">
+      <div className=" flex flex-col gap-[2rem]">
         {props.myProjects.map((myProject) => (
-          <div key={myProject.id} className="w-[300px]">
-            <div className="overflow-hidden h-[300px] w-[300px] m-2">
+          <div key={myProject.id} className="flex flex-col m-2 gap-2">
+            <div className="overflow-hidden h-[300px] ">
               <img
                 className=" duration-[2000ms] h-full w-full object-top hover:object-bottom object-cover rounded-lg"
                 src={imageFunc(myProject.img)}
                 alt={myProject.name}
-
               />
             </div>
-            <h2>{myProject.name}</h2>
-            <h3>{myProject.description}</h3>
+            <div>
+              <h2 className="text-[2.5rem] font-bold ">{myProject.name}</h2>
+              <h3 className="text-[1.1rem] font-semibold">{myProject.description}</h3>
+              <Link to=''>Visit the website</Link>
+              <Link to=""><FaGithub size={30}/></Link>
+            </div>
           </div>
         ))}
       </div>
