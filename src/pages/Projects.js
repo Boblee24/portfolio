@@ -25,10 +25,10 @@ const Projects = (props) => {
     return (
       <div className=" flex flex-col gap-[2rem]">
         {props.myProjects.map((myProject) => (
-          <div key={myProject.id} className="flex flex-col m-2 gap-2">
+          <div key={myProject.id} className="flex flex-col m-2 gap-2 active:bg-[red]">
             <div className="overflow-hidden h-[300px] ">
               <img
-                className=" duration-[2000ms] h-full w-full object-top hover:object-bottom object-cover rounded-lg"
+                className=" duration-[2000ms] h-full w-full object-top hover:object-bottom  object-cover rounded-lg"
                 src={imageFunc(myProject.img)}
                 alt={myProject.name}
               />
