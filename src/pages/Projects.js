@@ -25,7 +25,10 @@ const Projects = (props) => {
     return (
       <div className=" flex flex-col gap-[2rem]">
         {props.myProjects.map((myProject) => (
-          <div key={myProject.id} className="flex flex-col m-2 gap-2 active:bg-[red]">
+          <div
+            key={myProject.id}
+            className="flex flex-col m-2 gap-2 active:bg-[red]"
+          >
             <div className="overflow-hidden h-[300px] ">
               <img
                 className=" duration-[2000ms] h-full w-full object-top hover:object-bottom  object-cover rounded-lg"
@@ -35,9 +38,18 @@ const Projects = (props) => {
             </div>
             <div>
               <h2 className="text-[2.5rem] font-bold ">{myProject.name}</h2>
-              <h3 className="text-[1.1rem] font-semibold">{myProject.description}</h3>
-              <Link to=''>Visit the website</Link>
-              <Link to=""><FaGithub size={30}/></Link>
+              <h3 className="text-[1.1rem] font-semibold">
+                {myProject.description}
+              </h3>
+              <div className="flex gap-7">
+                <Link to="" className="text-[1.5rem]">
+                  Demo
+                </Link>
+                <Link to="" className="flex items-center">
+                  <FaGithub size={25} />
+                  <h2 className="text-[1.5rem]">Github</h2>
+                </Link>
+              </div>
             </div>
           </div>
         ))}
