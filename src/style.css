@@ -60,6 +60,12 @@ button.button-three {
 .translated {
   transform: translateX(0%);
 }
+.visible {
+  background: purple;
+}
+.notvisible {
+  background: pink;
+}
 /* .parent:hover .parent::after{
     z-index: 0;
 } */
