@@ -61,10 +61,12 @@ button.button-three {
   transform: translateX(0%);
 }
 .visible {
-  background: purple;
+  opacity: 1;
+  transform: translateY(0%);
 }
 .notvisible {
-  background: pink;
+  opacity: 0;
+  transform: translateY(-30%);
 }
 /* .parent:hover .parent::after{
     z-index: 0;
