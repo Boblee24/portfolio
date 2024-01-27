@@ -19,7 +19,7 @@ const Projects = (props) => {
           setIntersected(entry.isIntersecting);
         },
         {
-          threshold: 0.5, // Set your desired threshold value (here, 50% visibility)
+          threshold: 0.8, // Set your desired threshold value (here, 50% visibility)
         }
       );
       observer.observe(targetRef.current);
@@ -27,12 +27,11 @@ const Projects = (props) => {
         observer.disconnect(); // Cleanup observer on unmount
       };
     }, []);
-    console.log(intersected);
     return (
       <div key={myProject.id} ref={targetRef} className="">
         <div
           ref={targetRef}
-          className={`flex flex-col m-2 gap-2 active:bg-[red]  ] `}
+          className={`flex flex-col m-2 gap-2  ] `}
         >
           <div className="overflow-hidden h-[300px] z-[-1] relative ">
             <img
@@ -41,15 +40,15 @@ const Projects = (props) => {
               alt={myProject.name}
             />
             <div
-              className={`absolute bg-[#000000ab] rounded-lg p-2 duration-1000 z-60 h-full w-full top-0 ${
+              className={`absolute bg-[#000000ab] rounded-lg p-2 duration-1000 z-60 h-full w-full top-0 text-white ${
                 intersected ? "visible" : "notvisible"
               }`}
             >
-              <h2 className="text-[2.5rem] font-bold ">{myProject.name}</h2>
-              <h3 className="text-[1.1rem] font-semibold">
+              <h2 className="text-[2.2rem] font-bold font-[Roboto Condensed] tracking-widest">{myProject.name}</h2>
+              <h3 className="text-[1.1rem] font-regular py-3 font-[Poppins]">
                 {myProject.description}
               </h3>
-              <div className="flex gap-7 my-6 text-white">
+              <div className="flex gap-7 my-6 ">
                 <Link to="" className="text-[1.5rem]">
                   Demo
                 </Link>
@@ -78,7 +77,6 @@ const Projects = (props) => {
     <div className="pt-[5rem]">
       <h1>Projects</h1>
       <div>{MyProject()}</div>
-      <div className="w-full bg-slate-500 h-[100vh]"></div>
     </div>
   );
 };
