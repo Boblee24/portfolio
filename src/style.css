@@ -65,8 +65,8 @@ button.button-three {
   transform: translateY(0%);
 }
 .notvisible {
-  opacity: 0;
-  transform: translateY(-30%);
+  opacity: 1;
+  transform: translateY(100%);
 }
 /* .parent:hover .parent::after{
     z-index: 0;
