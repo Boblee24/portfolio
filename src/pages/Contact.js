@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { MdOutlineMail } from "react-icons/md";
 import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
 import { AppContext } from "../App";
+import seperator from "../assts/separator.svg"
 import { Link } from "react-router-dom";
 
 const Contact = () => {
@@ -15,10 +16,11 @@ const Contact = () => {
       exit={{ opacity: 0 }}
     >
       <div className="flex justify-center w-full px-2">
-        <div className=" bg-[#d7d7d7] w-full z-10 fixed top-[3.5rem]">
-          <h1 className="text-[2.5rem] border-l-2 border-b-2 leading-9 border-black  inline-block font-semibold mx-2">
+        <div className=" bg-[#d7d7d7] inline-block w-full z-10 fixed top-[3.5rem] ml-4 pb-2">
+          <h1 className="text-[2.5rem]  font-semibold ">
             Contact
           </h1>
+          <img src={seperator} alt="seperator" />
         </div>
         <div className=" grid-cols-1 grid gap-[6rem] mt-[4rem] mb-[4rem]">
           {Contacts.map((contact) => {
