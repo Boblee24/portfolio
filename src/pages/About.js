@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import seperator from "../assts/separator.svg";
 
 const About = () => {
   return (
@@ -10,19 +11,25 @@ const About = () => {
       exit={{ opacity: 0 }}
     >
       <div className=" flex  w-[100%] ">
-        <div className=" bg-[#D7D7D7] z-10 fixed top-4 w-full pb-3" >
-          <h2 className="text-[2.5rem] inline-block font-semibold border-l-2 border-black border-b-2 leading-[1rem] ml-2 mt-[5rem] pb-4 pl-4 self-start ">About Me</h2>
+        <div className=" bg-[#D7D7D7] z-10 fixed top-0 w-full m-2 pb-3">
+          <h2 className="text-[2.5rem] inline-block font-semibold mt-[3rem] self-start ">
+            About Me
+          </h2>
+          <img src={seperator} alt="seperator" />
         </div>
         <div className="">
-          <p className="text-[1.1rem] p-3 mt-[8rem] "> 
-            Hi there! I'm <span className="font-semibold">Aborisade Ayomiposi</span>, a passionate frontend web
-            developer based in Nigeria. With a creative mindset and a
-            love for technology, I specialize in crafting delightful user
-            experiences on the web using React.js, TypeScript, Tailwind CSS, and
-            JavaScript. My skills include proficiency in HTML5 and CSS3 for
-            building responsive and visually appealing layouts. I leverage
-            TypeScript to enhance code quality and maintainability, and I enjoy
-            working with the utility-first approach of Tailwind CSS for
+          <p className="text-[1.1rem] p-3 mt-[8rem] font-[Poppins] ">
+            Hi there! I'm{" "}
+            <span className="font-[Poppins] font-semibold">
+              Aborisade Ayomiposi
+            </span>
+            , a passionate frontend web developer based in Nigeria. With a
+            creative mindset and a love for technology, I specialize in crafting
+            delightful user experiences on the web using React.js, TypeScript,
+            Tailwind CSS, and JavaScript. My skills include proficiency in HTML5
+            and CSS3 for building responsive and visually appealing layouts. I
+            leverage TypeScript to enhance code quality and maintainability, and
+            I enjoy working with the utility-first approach of Tailwind CSS for
             streamlined styling. Additionally, I use JavaScript (ES6+) for
             creating dynamic and interactive web applications. Applying
             responsive design principles ensures a seamless experience across
