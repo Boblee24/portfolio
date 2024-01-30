@@ -12,15 +12,15 @@ const About = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div className=" flex flex-col w-full ">
-        <div className={`bg-[#D7D7D7] z-10 top-0  ${slide ? "fixed" : "block"} left-0 w-full pb-3 m-2`}>
+      <div className=" flex flex-col w-full relative m-2">
+        <div className={`bg-[#D7D7D7] z-10 ${slide ? "fixed left-0 top-0" : "block"}  w-full pb-3 `}>
           <h2 className={`text-[2.5rem] inline-block font-semibold ${slide ? "mt-[3rem]" : "mt-0"} self-start`}>
             About You
           </h2>
           <img src={seperator} alt="seperator" />
         </div>
         <div className="">
-          <p className={`text-[1.1rem] p-3 ${slide ? "mt-[8rem]" : "mt-0"} font-[Poppins] `}>
+          <p className={`text-[1.1rem] p-1 ${slide ? "mt-[8rem]" : "mt-0"} font-[Poppins] `}>
             Hi there! I'm{" "}
             <span className="font-[Poppins] font-semibold">
               Aborisade Ayomiposi

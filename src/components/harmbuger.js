@@ -7,7 +7,7 @@ const Harmbuger = (props) => {
     const {toggle, toggleClick} = useContext(AppContext)
     
   return (
-    <div className=' fixed right-0 top-2 z-20  md:hidden'>
+    <div className=' fixed right-0 top-2 z-20  md:hidden '>
         {/* <Heading handleHarmbugerclick={props.handleHarmbugerclick} toggle ={props.toggle}/> */}
         <button onClick={toggleClick} className="button-three mt-[-2px] md:hidden" aria-controls="primary-navigation" aria-expanded={toggle}>
     <svg stroke="var(--button-color)" fill="none" className="hamburger" viewBox="-10 -10 120 120" width="45">

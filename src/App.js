@@ -33,6 +33,10 @@ function App() {
     setToggle((prev) => !prev);
   };
   const [slide, setSlide ] = useState(false)
+  const toggleSlide = () => {
+    setSlide((prev) => !prev)
+    console.log('hello')
+  }
 
   return (
     <div className="App ">
@@ -45,7 +49,8 @@ function App() {
           Contacts,
           toggle,
           toggleClick,
-          slide
+          slide,
+          toggleSlide
         }}
       >
         <Header />
