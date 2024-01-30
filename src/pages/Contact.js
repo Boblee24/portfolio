@@ -5,6 +5,7 @@ import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
 import { AppContext } from "../App";
 import seperator from "../assts/separator.svg"
 import { Link } from "react-router-dom";
+//Thisis the partyt i've been telling you abouit
 
 const Contact = () => {
   const { Contacts } = useContext(AppContext);
