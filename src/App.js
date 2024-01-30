@@ -11,7 +11,7 @@ import Projects from "./pages/Projects";
 import { AnimatePresence } from "framer-motion";
 import Sidebar from "./components/Sidebar";
 import { createContext, useState } from "react";
-import LanguagesArray from "./data.json"
+import LanguagesArray from "./data.json";
 
 export const AppContext = createContext();
 function App() {
@@ -21,41 +21,59 @@ function App() {
   };
   const Languages = LanguagesArray.languages;
   const Contacts = LanguagesArray.contact;
-  const myProjects = LanguagesArray.projct
+  const myProjects = LanguagesArray.projct;
   const currentRoute = capitalizeFirstLetter(location.pathname.slice(1));
-  const date = new Date()
-  const day = date.getDate()
-  const month = date.getMonth() + 1
-  const year = date.getFullYear()
-  const todayDate = `${day}/${month}/${year}`
-  const [toggle, setToggle] = useState(false)
-    const toggleClick = () =>{
-        setToggle((prev) => !prev)
-    }
-    // const person = {
-    //   firstname: 'Ayomiposi',
-    //   sayHi: function () {
-    //     console.log(`Hi, ${this.firstname}`);
-    //   },
-    // };
-    
-    // const greet = person.sayHi.bind(person);
-    // greet(); // Outputs: Hi, Ayomiposi
-    
+  const date = new Date();
+  const day = date.getDate();
+  const month = date.getMonth() + 1;
+  const year = date.getFullYear();
+  const todayDate = `${day}/${month}/${year}`;
+  const [toggle, setToggle] = useState(false);
+  const toggleClick = () => {
+    setToggle((prev) => !prev);
+  };
+  const [slide, setSlide ] = useState(false)
+
   return (
     <div className="App ">
-      <AppContext.Provider value={{ currentRoute, todayDate, year, Languages, Contacts, toggle, toggleClick }}>
+      <AppContext.Provider
+        value={{
+          currentRoute,
+          todayDate,
+          year,
+          Languages,
+          Contacts,
+          toggle,
+          toggleClick,
+          slide
+        }}
+      >
         <Header />
         <Sidebar />
         <AnimatePresence>
-          <Routes location={location} key={location.pathname}>
+          {
+            slide ? 
+            <Routes location={location} key={location.pathname}>
             <Route index element={<Home />} />
             <Route path="skills" key="Skills" element={<Skills />} />
             <Route path="about" element={<About />} />
             <Route path="contact" element={<Contact />} />
-            <Route path="projects" element={<Projects myProjects={myProjects} />} />
+            <Route
+              path="projects"
+              element={<Projects myProjects={myProjects} />}
+            />
             <Route path="*" element={<h1> PAGE NOT FOUND</h1>} />
           </Routes>
+          :
+          <div>
+            <Home/>
+          <Skills/>
+          <About/>
+          <Projects myProjects={myProjects}/>
+          <Contact/>
+          </div>
+
+          }
         </AnimatePresence>
         <Footer />
       </AppContext.Provider>

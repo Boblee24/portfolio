@@ -5,25 +5,24 @@ import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
 import { AppContext } from "../App";
 import seperator from "../assts/separator.svg"
 import { Link } from "react-router-dom";
-//Thisis the partyt i've been telling you abouit
 
 const Contact = () => {
-  const { Contacts } = useContext(AppContext);
+  const { Contacts, slide } = useContext(AppContext);
   return (
     <motion.div
-      className=" xdm:h-[100dvh] flex justify-center items-center pt-[5rem]  "
+      className={` ${slide ? "" : "xdm:h-[100dvh]" } relative flex justify-center items-center pt-[5rem]`}   
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div className="flex justify-center w-full px-2">
-        <div className=" bg-[#d7d7d7] inline-block w-full z-10 fixed top-[3.5rem] ml-4 pb-2">
+      <div className="flex justify-center flex-col w-full px-2 relative">
+        <div className={`bg-[#d7d7d7] inline-block w-full z-10 ${slide ? "fixed top-[3.5rem]" : "block"} pb-2`}>
           <h1 className="text-[2.5rem]  font-semibold ">
             Contact
           </h1>
           <img src={seperator} alt="seperator" />
         </div>
-        <div className=" grid-cols-1 grid gap-[6rem] mt-[4rem] mb-[4rem]">
+        <div className=" grid-cols-1 grid place-content-center h-[100%] w-[100%] gap-[6rem] mt-[4rem] mb-[4rem]">
           {Contacts.map((contact) => {
             const iconComponent = (thatIcon) => {
               switch (thatIcon) {

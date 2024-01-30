@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import seperator from "../assts/separator.svg";
+import { AppContext } from "../App";
 
 const About = () => {
+  const {slide} = useContext(AppContext)
   return (
     <motion.div
       className=" flex justify-center items-center"
@@ -10,15 +12,15 @@ const About = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div className=" flex  w-[100%] ">
-        <div className=" bg-[#D7D7D7] z-10 fixed top-0 w-full m-2 pb-3">
-          <h2 className="text-[2.5rem] inline-block font-semibold mt-[3rem] self-start ">
-            About Me
+      <div className=" flex flex-col w-full ">
+        <div className={`bg-[#D7D7D7] z-10 top-0  ${slide ? "fixed" : "block"} left-0 w-full pb-3 m-2`}>
+          <h2 className={`text-[2.5rem] inline-block font-semibold ${slide ? "mt-[3rem]" : "mt-0"} self-start`}>
+            About You
           </h2>
           <img src={seperator} alt="seperator" />
         </div>
         <div className="">
-          <p className="text-[1.1rem] p-3 mt-[8rem] font-[Poppins] ">
+          <p className={`text-[1.1rem] p-3 ${slide ? "mt-[8rem]" : "mt-0"} font-[Poppins] `}>
             Hi there! I'm{" "}
             <span className="font-[Poppins] font-semibold">
               Aborisade Ayomiposi

@@ -4,14 +4,15 @@ import { AppContext } from "../App";
 import seperator from "../assts/separator.svg";
 
 const Skills = () => {
-  const { Languages } = useContext(AppContext);
+
+  const { Languages, slide } = useContext(AppContext);
   const imageFunc = (string) => {
     const image = require(`../assts/${string}`);
     return image;
   };
   const skills = () => {
     return (
-      <div className="grid grid-cols-3 w-full gap-[1.5rem] mt-[6rem] p-2">
+      <div className={`grid grid-cols-3 w-full gap-[1.5rem] ${slide ? 'mt-[6rem]' : "mt-[1rem]"} p-2`}>
         {Languages.map((Language) => (
           <div className="hover:scale-110 duration-300 p-2">
             <img src={imageFunc(Language.image)} alt={Language.name} />
@@ -27,9 +28,9 @@ const Skills = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div className="flex  w-full h-full items-center justify-between">
-        <div className="self-start fixed m-2">
-          <h1 className="text-[2.5rem] font-semibold    ">
+      <div className="flex flex-col w-full h-full items-center justify-between">
+        <div className={`bg-[#D7D7D7] z-10 top-0  ${slide ? "fixed" : "block"} left-0 w-full pb-3 m-2`}>
+          <h1 className={`text-[2.5rem] font-semibold ${slide ? "mt-[3rem]" : "mt-0"} self-start  `}>
             My Skills
           </h1>
           <img src={seperator} alt="seperator" />
