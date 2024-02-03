@@ -72,8 +72,8 @@ function App() {
           :
           <div>
             <Home/>
-          <Skills/>
           <About/>
+          <Skills/>
           <Projects myProjects={myProjects}/>
           <Contact/>
           </div>

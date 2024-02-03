@@ -13,11 +13,11 @@ const Home = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      id="home"
+      id="/"
     >
       {/* <div className="w-full h-full home hidden"></div> */}
       <div className="flex relative justify-between h-[100vh] w-full  items-center bg-[#1e1e1e]">
-        <div className="text-left home h-[50%]  text-white z-10 absolute bottom-0 bg-[#525252d0] w-full">
+        <div className="text-left home h-[50%]  text-white z-10 absolute bottom-0 bg-[#525252d2] w-full">
           <div className="absolute bottom-0 p-2 flex justify-between w-full">
             <div>
               <h2 className="text-[1.1rem]">HELLO, I'm</h2>
