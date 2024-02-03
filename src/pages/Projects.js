@@ -74,7 +74,7 @@ const Projects = (props) => {
   };
 
   return (
-    <div className="pt-[5rem]">
+    <div id="project" className="pt-[5rem]">
       <h1>Projects</h1>
       <div>{MyProject()}</div>
     </div>

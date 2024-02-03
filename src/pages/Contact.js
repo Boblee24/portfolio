@@ -14,6 +14,7 @@ const Contact = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
+      id="contact"
     >
       <div className="flex justify-center flex-col w-full px-2 relative">
         <div className={`bg-[#d7d7d7] w-full z-10 ${slide ? "fixed top-[3.5rem]" : "block"} pb-2`}>
@@ -22,7 +23,7 @@ const Contact = () => {
           </h1>
           <img src={seperator} alt="seperator" />
         </div>
-        <div className="grid grid-cols-1 place-content-center w-full gap-[6rem] mt-[4rem] mb-[4rem] mx-auto my-auto">
+        <div className="grid grid-cols-1 place-content-center w-full gap-[6rem] my-[4rem] mx-auto">
           {Contacts.map((contact) => {
             const iconComponent = (thatIcon) => {
               switch (thatIcon) {

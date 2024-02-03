@@ -10,7 +10,7 @@ const Header = () => {
   const { toggle, toggleClick, toggleSlide, slide } = useContext(AppContext);
 
   return (
-    <div className="header fixed flex w-full  z-20 bg-[#d7d7d7]">
+    <div className="header fixed flex w-full  z-20 bg-[#d7d7d789]">
       <div className="flex justify-between w-full items-center">
         <h1 className="z-20 p-3 duration-700">
           <Link className="text-[1.5rem] font-semibold duration-700" to="/">
@@ -23,7 +23,7 @@ const Header = () => {
       </div>
       <Harmbuger />
       <div
-        className={`absolute bg-[#d7d7d7] my-[3.5rem] h-[100vh] w-full duration-700 ${
+        className={`absolute bg-[#d7d7d774] my-[3.5rem] h-[100vh] w-full duration-700 ${
           toggle ? "translated" : "untranslated"
         } `}
       >

@@ -13,6 +13,7 @@ const Home = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
+      id="home"
     >
       {/* <div className="w-full h-full home hidden"></div> */}
       <div className="flex relative justify-between h-[100vh] w-full  items-center bg-[#1e1e1e]">
