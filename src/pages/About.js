@@ -11,6 +11,7 @@ const About = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
+      id="about"
     >
       <div className=" flex flex-col w-full relative m-2">
         <div className={`bg-[#D7D7D7] z-10 ${slide ? "fixed left-0 top-0" : "block"}  w-full pb-3 `}>

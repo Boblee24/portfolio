@@ -1,5 +1,6 @@
 import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { Link as ScrollLink } from "react-scroll";
 import { MdOutlineMail } from "react-icons/md";
 import { CgScrollV } from "react-icons/cg";
 import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
@@ -17,7 +18,12 @@ const Header = () => {
             {toggle ? "EMMANUEL" : "AYOMI"}
           </Link>
         </h1>
-        <button className={`mr-[4rem] z-20 p-2 duration-500 ${slide ? "rotate-90" :''}`} onClick={toggleSlide}>
+        <button
+          className={`mr-[4rem] z-20 p-2 duration-500 ${
+            slide ? "rotate-90" : ""
+          }`}
+          onClick={toggleSlide}
+        >
           <CgScrollV size={25} />
         </button>
       </div>
@@ -29,29 +35,75 @@ const Header = () => {
       >
         <ul className=" justify-around w-full flex gap-9 font-semibold flex-col p-3 pt-[2rem] items-center text-[2rem] text-black ">
           <li>
-            <NavLink onClick={toggleClick} className="" to="/">
-              Home
-            </NavLink>
+            {slide ? (
+              <NavLink onClick={toggleClick} className="" to="/">
+                Home
+              </NavLink>
+            ) : (
+              <ScrollLink
+                onClick={toggleClick}
+                className=""
+                to="/" // Replace with the actual target section's ID
+                spy={true}
+                smooth={true}
+                offset={-70} // Adjust the offset if needed to handle fixed header
+                duration={500}
+              >
+                Home
+              </ScrollLink>
+            )}
           </li>
           <li>
-            <NavLink onClick={toggleClick} className="" to="/about">
-              About
-            </NavLink>
+            {slide ? (
+              <NavLink onClick={toggleClick} className="" to="/about">
+                About
+              </NavLink>
+            ) : (
+              <ScrollLink
+                onClick={toggleClick}
+                className=""
+                to="about" // Replace with the actual target section's ID
+                spy={true}
+                smooth={true}
+                offset={-70} // Adjust the offset if needed to handle fixed header
+                duration={500}
+              >
+                About
+              </ScrollLink>
+            )}
           </li>
           <li>
-            <NavLink onClick={toggleClick} className="" to="/projects">
-              Projects
-            </NavLink>
+            {slide ? (
+              <NavLink onClick={toggleClick} className="" to="/project">
+                Projects
+              </NavLink>
+            ) : (
+              <a onClick={toggleClick} className="" href="#project">
+                Projects
+              </a>
+            )}
           </li>
           <li>
-            <NavLink onClick={toggleClick} className="" to="/skills">
-              Skills
-            </NavLink>
+            {slide ? (
+              <NavLink onClick={toggleClick} className="" to="/skills">
+                Skills
+              </NavLink>
+            ) : (
+              <a onClick={toggleClick} className="" href="#skills">
+                Skills
+              </a>
+            )}
           </li>
           <li>
-            <NavLink onClick={toggleClick} className="" to="/contact">
-              Contact
-            </NavLink>
+            {slide ? (
+              <NavLink onClick={toggleClick} className="" to="/contact">
+                Contact
+              </NavLink>
+            ) : (
+              <a onClick={toggleClick} className="" href="#contact">
+                Contact
+              </a>
+            )}
           </li>
         </ul>
         <ul className="flex flex-col p-3 gap-5">

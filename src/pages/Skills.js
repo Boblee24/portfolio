@@ -27,6 +27,7 @@ const Skills = () => {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
+      id="skills"
     >
       <div className="flex flex-col w-full h-full items-center justify-between">
         <div className={`bg-[#D7D7D7] z-10 top-0  ${slide ? "fixed" : "block"} left-0 w-full pb-3 m-2`}>
