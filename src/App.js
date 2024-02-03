@@ -35,7 +35,6 @@ function App() {
   const [slide, setSlide ] = useState(false)
   const toggleSlide = () => {
     setSlide((prev) => !prev)
-    console.log('hello')
   }
 
   return (

@@ -14,7 +14,7 @@ const Skills = () => {
     return (
       <div className={`grid grid-cols-3 w-full gap-[1.5rem] ${slide ? 'mt-[6rem]' : "mt-[1rem]"} p-2`}>
         {Languages.map((Language) => (
-          <div className="hover:scale-110 duration-300 p-2">
+          <div className="hover:scale-110 duration-300 p-2" key={Language.id}>
             <img src={imageFunc(Language.image)} alt={Language.name} />
           </div>
         ))}
