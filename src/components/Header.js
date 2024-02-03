@@ -11,7 +11,7 @@ const Header = () => {
   const { toggle, toggleClick, toggleSlide, slide } = useContext(AppContext);
 
   return (
-    <div className="header fixed flex w-full  z-20 bg-[#d7d7d789]">
+    <div className="header fixed flex w-full  z-20 bg-[#d7d7d7fc]">
       <div className="flex justify-between w-full items-center">
         <h1 className="z-20 p-3 duration-700">
           <Link className="text-[1.5rem] font-semibold duration-700" to="/">
@@ -29,7 +29,7 @@ const Header = () => {
       </div>
       <Harmbuger />
       <div
-        className={`absolute bg-[#d7d7d774] my-[3.5rem] h-[100vh] w-full duration-700 ${
+        className={`absolute bg-[#d7d7d7f9] my-[3.5rem] h-[100vh] w-full duration-700 ${
           toggle ? "translated" : "untranslated"
         } `}
       >
@@ -72,26 +72,43 @@ const Header = () => {
               </ScrollLink>
             )}
           </li>
-          <li>
-            {slide ? (
-              <NavLink onClick={toggleClick} className="" to="/project">
-                Projects
-              </NavLink>
-            ) : (
-              <a onClick={toggleClick} className="" href="#project">
-                Projects
-              </a>
-            )}
-          </li>
+          
           <li>
             {slide ? (
               <NavLink onClick={toggleClick} className="" to="/skills">
                 Skills
               </NavLink>
             ) : (
-              <a onClick={toggleClick} className="" href="#skills">
+              <ScrollLink
+                onClick={toggleClick}
+                className=""
+                to="skills" // Replace with the actual target section's ID
+                spy={true}
+                smooth={true}
+                offset={-70} // Adjust the offset if needed to handle fixed header
+                duration={500}
+              >
                 Skills
-              </a>
+              </ScrollLink>
+            )}
+          </li>
+          <li>
+            {slide ? (
+              <NavLink onClick={toggleClick} className="" to="/projects">
+                Projects
+              </NavLink>
+            ) : (
+              <ScrollLink
+                onClick={toggleClick}
+                className=""
+                to="project" // Replace with the actual target section's ID
+                spy={true}
+                smooth={true}
+                offset={-70} // Adjust the offset if needed to handle fixed header
+                duration={500}
+              >
+                Projects
+              </ScrollLink>
             )}
           </li>
           <li>
@@ -100,9 +117,17 @@ const Header = () => {
                 Contact
               </NavLink>
             ) : (
-              <a onClick={toggleClick} className="" href="#contact">
+              <ScrollLink
+                onClick={toggleClick}
+                className=""
+                to="contact" // Replace with the actual target section's ID
+                spy={true}
+                smooth={true}
+                offset={-70} // Adjust the offset if needed to handle fixed header
+                duration={500}
+              >
                 Contact
-              </a>
+              </ScrollLink>
             )}
           </li>
         </ul>
