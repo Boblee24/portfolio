@@ -12,7 +12,7 @@ const Skills = () => {
   const skills = () => {
     return (
       <motion.div
-        initial={{ opacity: 0, y : '3rem'}}
+        initial={{ opacity: 0, y : '5rem'}}
         whileInView={{ opacity: 1, y : 0 }}
         transition = {{delay: 0.2, duration: .5 }}
         className={`grid grid-cols-3 w-full gap-[1.5rem] ${

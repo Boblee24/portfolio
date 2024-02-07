@@ -1,0 +1,19 @@
+<div
+              className={`absolute bg-[#000000ab] rounded-lg p-2 duration-1000 z-60 h-full w-full top-0 text-white ${
+                intersected ? "visible" : "notvisible"
+              }`}
+            >
+              <h2 className="text-[2.2rem] font-bold font-[Roboto Condensed] tracking-widest">{myProject.name}</h2>
+              <h3 className="text-[1.1rem] font-regular py-3 font-[Poppins]">
+                {myProject.description}
+              </h3>
+              <div className="flex gap-7 my-6 ">
+                <Link to="" className="text-[1.5rem]">
+                  Demo
+                </Link>
+                <Link to="" className="flex items-center gap-2">
+                  <FaGithub size={25} />
+                  <h2 className="text-[1.5rem]">Github</h2>
+                </Link>
+              </div>
+            </div>
