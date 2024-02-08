@@ -8,7 +8,7 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
 import Projects from "./pages/Projects";
-import ProjectDuplicate from "./pages/ProjectDuplicate";
+// import ProjectDuplicate from "./pages/ProjectDuplicate";
 import { AnimatePresence } from "framer-motion";
 import Sidebar from "./components/Sidebar";
 import { createContext, useState } from "react";
