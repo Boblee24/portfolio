@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
 import Projects from "./pages/Projects";
+import ProjectDuplicate from "./pages/ProjectDuplicate";
 import { AnimatePresence } from "framer-motion";
 import Sidebar from "./components/Sidebar";
 import { createContext, useState } from "react";
@@ -66,6 +67,10 @@ function App() {
               path="projects"
               element={<Projects myProjects={myProjects} />}
             />
+            {/* <Route
+              path="projects"
+              element={<ProjectDuplicate myProjects={myProjects} />}
+            /> */}
             <Route path="*" element={<h1> PAGE NOT FOUND</h1>} />
           </Routes>
           :
