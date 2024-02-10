@@ -3,24 +3,28 @@ import { motion } from "framer-motion";
 import { MdOutlineMail } from "react-icons/md";
 import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
 import { AppContext } from "../App";
-import seperator from "../assts/separator.svg"
+import seperator from "../assts/separator.svg";
 import { Link } from "react-router-dom";
 
 const Contact = () => {
   const { Contacts, slide } = useContext(AppContext);
   return (
     <motion.div
-      className={` ${slide ? "" : "" } w-full relative flex justify-center items-center pt-[5rem]`}   
+      className={` ${
+        slide ? "" : ""
+      } w-full relative flex justify-center items-center pt-[5rem]`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       id="contact"
     >
       <div className="flex justify-center flex-col w-full px-2 relative">
-        <div className={`bg-[#d7d7d7] w-full z-10 ${slide ? "fixed top-[3.5rem]" : "block"} pb-2`}>
-          <h1 className="text-[2.5rem] font-semibold">
-            Contact
-          </h1>
+        <div
+          className={`bg-[#d7d7d7] w-full z-10 ${
+            slide ? "fixed top-[3.5rem]" : "block"
+          } pb-2`}
+        >
+          <h1 className="text-[2.5rem] font-semibold">Contact</h1>
           <img src={seperator} alt="seperator" />
         </div>
         <div className="grid grid-cols-1 place-content-center w-full gap-[6rem] my-[4rem] mx-auto">
@@ -42,10 +46,10 @@ const Contact = () => {
             const getIcon = iconComponent(contact.icon);
             return (
               <motion.div
-                initial={{ opacity: 0, y : '5rem'}}
-                animate={{ opacity: 1, delay :.5,  y : 0 }}
-                exit={{ opacity: 1, delay :.5,  y : 0 }}
-                transition = {{delay: 0, duration: .1 }}
+                initial={{ opacity: 0, y: "5rem" }}
+                animate={{ opacity: 1, delay: 0.5, y: 0 }}
+                exit={{ opacity: 1, delay: 0.5, y: 0 }}
+                transition={{ delay: 0, duration: 0.1 }}
                 className=" parent group hover:scale-110 duration-700 "
                 key={contact.id}
               >
@@ -62,7 +66,7 @@ const Contact = () => {
                     to="https://news.google.com"
                     className="self-start py-2 px-4 bg-black text-[#808080] hover:animate-[]"
                   >
-                    Visit <motion.span > &rarr; </motion.span>
+                    Visit <motion.span> &rarr; </motion.span>
                   </Link>
                 </div>
               </motion.div>
