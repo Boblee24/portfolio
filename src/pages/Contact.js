@@ -41,7 +41,11 @@ const Contact = () => {
             };
             const getIcon = iconComponent(contact.icon);
             return (
-              <div
+              <motion.div
+                initial={{ opacity: 0, y : '5rem'}}
+                animate={{ opacity: 1, delay :.5,  y : 0 }}
+                exit={{ opacity: 1, delay :.5,  y : 0 }}
+                transition = {{delay: 0, duration: .1 }}
                 className=" parent group hover:scale-110 duration-700 "
                 key={contact.id}
               >
@@ -61,7 +65,7 @@ const Contact = () => {
                     Visit &rarr;
                   </Link>
                 </div>
-              </div>
+              </motion.div>
             );
           })}
         </div>
