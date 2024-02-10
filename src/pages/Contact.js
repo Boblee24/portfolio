@@ -18,7 +18,7 @@ const Contact = () => {
     >
       <div className="flex justify-center flex-col w-full px-2 relative">
         <div className={`bg-[#d7d7d7] w-full z-10 ${slide ? "fixed top-[3.5rem]" : "block"} pb-2`}>
-          <h1 className="text-[2.5rem] font-semibold ">
+          <h1 className="text-[2.5rem] font-semibold">
             Contact
           </h1>
           <img src={seperator} alt="seperator" />
@@ -62,7 +62,7 @@ const Contact = () => {
                     to="https://news.google.com"
                     className="self-start py-2 px-4 bg-black text-[#808080] hover:animate-[]"
                   >
-                    Visit &rarr;
+                    Visit <motion.span > &rarr; </motion.span>
                   </Link>
                 </div>
               </motion.div>
