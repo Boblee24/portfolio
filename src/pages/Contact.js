@@ -50,7 +50,7 @@ const Contact = () => {
                 animate={{ opacity: 1, delay: 0.5, y: 0 }}
                 exit={{ opacity: 1, delay: 0.5, y: 0 }}
                 transition={{ delay: 0, duration: 0.1 }}
-                className=" parent group hover:scale-110 duration-700 "
+                className=" w-[290px] h-[150px] xx:w-[320px] xx:h-[160px] relative z-[8] m-auto group hover:scale-110 duration-700 "
                 key={contact.id}
               >
                 <div className=" hello group-hover:bg-[#808080] duration-700  ease-in-out transition border-2 border-black "></div>

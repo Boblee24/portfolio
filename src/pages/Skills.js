@@ -15,7 +15,7 @@ const Skills = () => {
         initial={{ opacity: 0, y: "5rem" }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.5 }}
-        className={`grid grid-cols-3 w-full gap-[1.5rem] ${
+        className={`grid grid-cols-3 w-full bg-[red] justify-between gap-[1rem] r  ${
           slide ? "mt-[6rem]" : "mt-[1rem]"
         } p-2`}
       >
@@ -50,7 +50,9 @@ const Skills = () => {
           </h1>
           <img src={seperator} alt="seperator" />
         </div>
-        {skills()}
+        <div className="w-full flex justify-items-center bg-[blue]">
+          {skills()}
+        </div>
       </div>
     </motion.div>
   );
