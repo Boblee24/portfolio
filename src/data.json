@@ -85,21 +85,21 @@
       "id": 2,
       "icon" :"LinkedIn" ,
       "name": "LinkedIn",
-      "url": "url",
+      "url": "https://www.linkedin.com/in/ayomiposi-aborisade-74859922a/",
       "username": "This is the Username"
     },
     {
       "id":3,
       "icon" :"Twitter" ,
       "name": "Twitter",
-      "url": "url",
+      "url": "https://twitter.com/BOBLEE_AYO",
       "username": "This is the Username"
     },
     {
       "id":4,
       "icon" :"Github" ,
       "name": "Github",
-      "url": "url",
+      "url": "https://github.com/Boblee24",
       "username": "This is the Username"
     }
   ],

@@ -63,7 +63,7 @@ const Contact = () => {
                   </div>
                   <h4 className="italic font-semibold">{contact.username}</h4>
                   <Link
-                    to="https://news.google.com"
+                    to={contact.url}
                     className="self-start py-2 px-4 bg-black text-[#808080] hover:animate-[]"
                   >
                     Visit <motion.span> &rarr; </motion.span>
