@@ -27,7 +27,7 @@ const Contact = () => {
           <h1 className="text-[2.5rem] font-semibold">Contact</h1>
           <img src={seperator} alt="seperator" />
         </div>
-        <div className="grid grid-cols-1 place-content-center w-full gap-[6rem] my-[4rem] mx-auto">
+        <div className="grid grid-cols-1 xii:grid-cols-2 place-content-center w-full gap-[6rem] my-[4rem] mx-auto">
           {Contacts.map((contact) => {
             const iconComponent = (thatIcon) => {
               switch (thatIcon) {
@@ -50,7 +50,7 @@ const Contact = () => {
                 animate={{ opacity: 1, delay: 0.5, y: 0 }}
                 exit={{ opacity: 1, delay: 0.5, y: 0 }}
                 transition={{ delay: 0, duration: 0.1 }}
-                className=" w-[290px] h-[150px] xx:w-[320px] xx:h-[160px] relative z-[8] m-auto group hover:scale-110 duration-700 "
+                className=" w-[290px] h-[150px] xii:h-[150px] xii:w-[290px] xx:w-[320px] xx:h-[160px] dm:h-[160px] dm:w-[320px] relative z-[8] m-auto group hover:scale-110 duration-700 "
                 key={contact.id}
               >
                 <div className=" hello group-hover:bg-[#808080] duration-700  ease-in-out transition border-2 border-black "></div>

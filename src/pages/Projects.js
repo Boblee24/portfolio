@@ -35,7 +35,7 @@ const Projects = (props) => {
           ref={targetRef}
           className={`flex flex-col m-2 gap-2  ] `}
         >
-          <div className="overflow-hidden h-[300px] z-[-1] relative ">
+          <div className="overflow-hidden h-[400px] z-[-1] relative ">
             <img
               className=" duration-[2000ms] h-full w-full z-20 object-top hover:object-bottom  object-cover rounded-lg"
               src={imageFunc(myProject.img)}
