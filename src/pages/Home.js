@@ -16,10 +16,10 @@ const Home = () => {
       id="/"
     >
       {/* <div className="w-full h-full home hidden"></div> */}
-      <div className="flex relative justify-between h-[100vh] w-full  items-center bg-[#1e1e1e]">
-        <div className="text-left home h-[50%]  text-white z-10 absolute bottom-0 bg-[#525252d2] w-full">
-          <div className="absolute bottom-0 p-2 flex justify-between w-full">
-            <div>
+      <div className="flex relative justify-between h-[100vh] xxdm:h-auto w-full  items-center bg-[#1e1e1e]">
+        <div className="text-left home h-[50%]  text-white z-10 absolute xxdm:static bottom-0 bg-[#525252d2] w-full">
+          <div className="absolute xxdm:static bottom-0 p-2 flex justify-between w-full">
+            <div className="text-[white]">
               <h2 className="text-[1.1rem]">HELLO, I'm</h2>
               <h1 className="text-[1.5rem] font-bold">Aborisade Ayomiposi</h1>
               <h2 className="text-[1.2rem]">A Frontend Web Developer</h2>
@@ -34,8 +34,8 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className=" w-[150%] xx:w-[120%] left-[-3rem] xx:top-[-6rem] xx:left-[-1rem] top-[-4rem] xii:w-full xii:left-[6rem] absolute ">
-          <img src={myImage2} className="w-full h-full " alt="ayomiposi" />
+        <div className=" w-[150%] xx:w-[120%] left-[-3rem] xx:top-[-6rem] xx:left-[-1rem] top-[-4rem] xii:w-full xii:left-[6rem] dm:top-[-8rem] absolute xdm:top-[-30%] xdm:left-[20%] xxdm:static ">
+          <img src={myImage2} className="w-full opacity-[.1] h-full " alt="ayomiposi" />
         </div>
       </div>
     </motion.div>
