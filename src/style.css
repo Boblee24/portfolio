@@ -71,3 +71,12 @@ button.button-three {
 /* .parent:hover .parent::after{
     z-index: 0;
 } */
+@media screen and (min-width: 1000px) {
+  .home{
+    clip-path: none;
+  }
+  .sidebar {
+    /* writing-mode: sideways-lr; */
+    writing-mode: horizontal-tb;
+  }
+}
