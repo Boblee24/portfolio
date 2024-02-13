@@ -39,12 +39,15 @@ const Home = () => {
           </div>
         </div>
         <div className=" w-[150%] xx:w-[120%] left-[-3rem] xx:top-[-6rem] xx:left-[-1rem] top-[-4rem] xii:w-full xii:left-[6rem] dm:top-[-8rem] absolute xdm:top-[-30%] xdm:left-[20%] xxdm:static ">
-          <div className="xxdm:h-[400px] xxdm:w-[400px] overflow-hidden xxdm:border-2 xxdm:border-[#d7d7d7] ">
-            <img
-              src={myImage2}
-              className="w-full h-full xxdm:h-auto "
-              alt="ayomiposiemmanuel"
-            />
+          <div className="xxdm:h-[400px] xxdm:w-[400px] xxdm:relative xxdm:border-2 xxdm:border-[#d7d7d7] z-[8]">
+            <div className="hello group-hover:bg-[#808080] duration-700  ease-in-out transition xxdm:border-2 xxdm:border-white xxdm:z-[-10]"></div>
+            <div className="w-full h-full overflow-hidden z-1 bg-black">
+              <img
+                src={myImage2}
+                className="w-full h-full xxdm:h-auto opacity-[1] "
+                alt="ayomiposiemmanuel"
+              />
+            </div>
           </div>
         </div>
       </div>
