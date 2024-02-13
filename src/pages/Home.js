@@ -42,8 +42,8 @@ const Home = () => {
           <div className="xxdm:h-[400px] xxdm:w-[400px] overflow-hidden xxdm:border-2 xxdm:border-[#d7d7d7] ">
             <img
               src={myImage2}
-              className="w-full opacity-[.1] h-full xxdm:h-auto "
-              alt="ayomiposi"
+              className="w-full h-full xxdm:h-auto "
+              alt="ayomiposiemmanuel"
             />
           </div>
         </div>
