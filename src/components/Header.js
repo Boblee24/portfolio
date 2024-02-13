@@ -46,7 +46,7 @@ const Header = () => {
                 to="/" // Replace with the actual target section's ID
                 spy={true}
                 smooth={true}
-                offset={-70} // Adjust the offset if needed to handle fixed header
+                offset={-70} // Adjust the offset if needed to handle fixed header // alright
                 duration={500}
               >
                 Home
