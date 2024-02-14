@@ -11,7 +11,7 @@ const Header = () => {
   const { toggle, toggleClick, toggleSlide, slide } = useContext(AppContext);
 
   return (
-    <div className="header fixed flex w-full  z-20 bg-[#d7d7d7fc]">
+    <div className="fixed flex w-full items-center z-20 bg-[#d7d7d7fc]">
       <div className="flex justify-between w-full items-center">
         <h1 className="z-20 p-3 duration-700">
           <Link className="text-[1.5rem] font-semibold duration-700" to="/">
@@ -29,11 +29,11 @@ const Header = () => {
       </div>
       <Harmbuger />
       <div
-        className={`absolute bg-[#d7d7d7f9] my-[3.5rem] h-[100vh] w-full duration-700 ${
+        className={`absolute bg-[#d7d7d7f9] md:bg-inherit my-[3.5rem] md:m-0 h-[100vh] md:h-auto md:static  w-full duration-700 ${
           toggle ? "translated" : "untranslated"
         } `}
       >
-        <ul className=" justify-around w-full flex gap-9 font-semibold flex-col p-3 pt-[2rem] items-center text-[2rem] text-black ">
+        <ul className=" justify-around w-full md:flex-row flex gap-9 font-semibold flex-col p-3 pt-[2rem] items-center text-[2rem] md:text-[1.2rem] text-black md:p-3 duration-700">
           <li>
             {slide ? (
               <NavLink onClick={toggleClick} className="" to="/">
@@ -131,7 +131,7 @@ const Header = () => {
             )}
           </li>
         </ul>
-        <ul className="flex flex-col p-3 gap-5">
+        <ul className="flex flex-col p-3 gap-5 md:hidden">
           <li>
             <Link to="">
               <MdOutlineMail className="text-[black]" size={25} />

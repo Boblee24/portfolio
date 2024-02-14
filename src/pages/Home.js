@@ -16,9 +16,9 @@ const Home = () => {
       id="/"
     >
       {/* <div className="w-full h-full home hidden"></div> */}
-      <div className="flex relative justify-between h-[100vh] xxdm:h-auto w-full xxdm:w-full items-center">
-        <div className="text-center home h-[50%] text-white z-10 absolute xxdm:static bottom-0 bg-[#525252d2] xxdm:bg-inherit w-full">
-          <div className="absolute xxdm:static bottom-0 p-2 flex xxdm:flex-col justify-between w-full">
+      <div className="flex relative justify-between h-[100vh] xxdm:h-auto w-full xxdm:w-full items-center xxdm:px-[8%] gap-1">
+        <div className="text-center home h-[50%] text-white z-10 absolute xxdm:static bottom-0 bg-[#525252d2] xxdm:bg-inherit w-full xxdm:w-auto">
+          <div className="absolute xxdm:static bottom-0 p-2 flex xxdm:flex-col justify-between w-full xxdm:p-0">
             <div className="text-[white]">
               <h2 className="text-[1.1rem] xxdm:text-[2rem]">HELLO, I'm</h2>
               <h1 className="text-[1.5rem] font-bold xxdm:text-[2.3rem]">

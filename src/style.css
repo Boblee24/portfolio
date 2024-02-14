@@ -51,6 +51,7 @@ button.button-three {
 .active{
   color: red;
   text-decoration: line-through;
+  /* transition: 1000ms; */
 }
 .untranslated { 
   transform: translateX(-100%);
@@ -69,6 +70,14 @@ button.button-three {
 /* .parent:hover .parent::after{
     z-index: 0;
 } */
+@media screen and (min-width: 768px){
+  .untranslated { 
+    transform: translateX(0%);
+  }
+  .translated {
+    transform: translateX(0%);
+  }
+}
 @media screen and (min-width: 1000px) {
   .home{
     clip-path: none;
