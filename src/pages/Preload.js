@@ -18,8 +18,8 @@ const Preload = ({ onLoadingComplete }) => {
     <div className={`preload-container ${loading ? "loading" : "loaded"}`}>
       <div className="preload-overlay"></div>
       <div className="preload-content">
-        <div class="escape">Escape</div>
-        <div class="experience">
+        <div className="escape text-[1.4rem]">Escape</div>
+        <div className="experience text-[1.4rem]">
           <span>into amazing experiences</span>
         </div>
       </div>
