@@ -13,6 +13,7 @@ import { AnimatePresence } from "framer-motion";
 import Sidebar from "./components/Sidebar";
 import { createContext, useState } from "react";
 import LanguagesArray from "./data.json";
+import Preload from "./pages/Preload";
 
 export const AppContext = createContext();
 function App() {
@@ -37,9 +38,15 @@ function App() {
   const toggleSlide = () => {
     setSlide((prev) => !prev)
   }
+  // Preload screen 
+  const [loadingComplete, setLoadingComplete] = useState(false);
+
+  const handleLoadingComplete = () => {
+    setLoadingComplete(true);
+  };
 
   return (
-    <div className="App ">
+    <div className={`main-content App ${loadingComplete ? 'show' : 'hide'}`}>
       <AppContext.Provider
         value={{
           currentRoute,
@@ -53,6 +60,7 @@ function App() {
           toggleSlide
         }}
       >
+        <Preload onLoadingComplete={handleLoadingComplete}/>
         <Header />
         <Sidebar />
         <AnimatePresence>
