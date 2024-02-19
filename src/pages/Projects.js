@@ -1,9 +1,6 @@
-// import { useRef, useState } from "react";
 import { useRef, useEffect, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
-
-
 
 const Projects = (props) => {
   const imageFunc = (string) => {
@@ -13,37 +10,39 @@ const Projects = (props) => {
 
   const MyProjectItem = ({ myProject }) => {
     const targetRef = useRef();
-    const [intersected, setIntersected] = useState(null);
+    const [isVisible, setIsVisible] = useState(false);
+
     useEffect(() => {
       const observer = new IntersectionObserver(
         (entries) => {
           const entry = entries[0];
-          setIntersected(entry.isIntersecting);
+          setIsVisible(entry.isIntersecting);
         },
         {
-          threshold: 0.8, // Set your desired threshold value (here, 50% visibility)
+          threshold: 0.8,
         }
       );
       observer.observe(targetRef.current);
+
       return () => {
-        observer.disconnect(); // Cleanup observer on unmount
+        observer.disconnect();
       };
     }, []);
+
     return (
       <div key={myProject.id} ref={targetRef} className="">
         <div
-          ref={targetRef}
-          className={`flex flex-col m-2 gap-2  ] `}
+          className={`flex flex-col m-2 gap-2`}
         >
           <div className="overflow-hidden h-[400px] z-[-1] relative ">
             <img
-              className=" duration-[2000ms] h-full w-full z-20 object-top hover:object-bottom  object-cover rounded-lg"
+              className="duration-[2000ms] h-full w-full z-20 object-top hover:object-bottom  object-cover rounded-lg"
               src={imageFunc(myProject.img)}
               alt={myProject.name}
             />
             <div
               className={`absolute bg-[#000000ab] rounded-lg p-2 duration-1000 z-60 h-full w-full top-0 text-white ${
-                intersected ? "visible" : "notvisible"
+                isVisible ? "visible" : "notvisible"
               }`}
             >
               <h2 className="text-[2.2rem] font-bold font-[Roboto Condensed] tracking-widest">{myProject.name}</h2>
@@ -65,6 +64,7 @@ const Projects = (props) => {
       </div>
     );
   };
+
   const MyProject = () => {
     return (
       <div className=" flex flex-col gap-[2rem]">
