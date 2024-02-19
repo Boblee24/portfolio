@@ -122,8 +122,8 @@
       "description": " Engaging quiz app for knowledge enthusiasts. Features diverse categories, scoring, and interactive challenges for an entertaining learning experience."
     },
     {
-      "id":2,
-      "img": "about.png",
+      "id":3,
+      "img": "quizzical.png",
       "stack" :"tailwindcss" ,
       "name": "Quizzical",
       "url": "url",
