@@ -53,7 +53,7 @@ const Contact = () => {
                 className=" w-[290px] h-[150px] xii:h-[150px] xii:w-[290px] xx:w-[320px] xx:h-[160px] dm:h-[160px] dm:w-[320px] relative z-[8] m-auto group hover:scale-110 duration-700 "
                 key={contact.id}
               >
-                <div className=" hello top-[1.2rem] left-[1.2rem] group-hover:bg-[#808080] duration-700  ease-in-out transition border-2 border-black z-[-10] "></div>
+                <div className=" hello top-[1.2rem] left-[1.2rem] group-hover:bg-[#808080] duration-700  ease-in-out transition border-4 border-black z-[-10] "></div>
                 <div className="z-1 border-b-2 border-l-2 p-4 border-black h-full gap-2 bg-[#b0b0b0] flex flex-col ">
                   <div className="flex gap-2">
                     <div className="">{getIcon}</div>
