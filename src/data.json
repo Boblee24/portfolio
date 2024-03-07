@@ -109,7 +109,8 @@
       "img": "about.png",
       "stack" :"tailwindcss" ,
       "name": "Tradiant",
-      "url": "url",
+      "github" : "https://github.com/Boblee24/coinhub",
+      "url": "https://tangent-ayomi.netlify.app",
       "description": "Dynamic stock tracking app with real-time data, blog insights, and user-friendly tools for informed investment decisions"
 
     },
@@ -118,7 +119,8 @@
       "img": "about.png",
       "stack" :"tailwindcss" ,
       "name": "Quizzical",
-      "url": "url",
+      "github" : "https://github.com/Boblee24/quiziccal",
+      "url": "https://bob-quizzify.netlify.app/",
       "description": " Engaging quiz app for knowledge enthusiasts. Features diverse categories, scoring, and interactive challenges for an entertaining learning experience."
     },
     {
@@ -126,7 +128,26 @@
       "img": "quizzical.png",
       "stack" :"tailwindcss" ,
       "name": "Quizzical",
-      "url": "url",
+      "github" : "https://github.com/Boblee24/quiziccal",
+      "url": "https://bob-quizzify.netlify.app/",
+      "description": " Engaging quiz app for knowledge enthusiasts. Features diverse categories, scoring, and interactive challenges for an entertaining learning experience."
+    },
+    {
+      "id":4,
+      "img": "rogue.png",
+      "stack" :"tailwindcss" ,
+      "name": "Rogue Clone",
+      "github" : "https://github.com/Boblee24/Rogue",
+      "url": "https://ayomi-rogue.netlify.app/",
+      "description": " Engaging quiz app for knowledge enthusiasts. Features diverse categories, scoring, and interactive challenges for an entertaining learning experience."
+    },
+    {
+      "id":5,
+      "img": "bookmark.png",
+      "stack" :"tailwindcss" ,
+      "name": "Bookmark",
+      "github" : "https://github.com/Boblee24/Bookmark.github.io",
+      "url": "https://ayo-bookmark.netlify.app/",
       "description": " Engaging quiz app for knowledge enthusiasts. Features diverse categories, scoring, and interactive challenges for an entertaining learning experience."
     }
   ]

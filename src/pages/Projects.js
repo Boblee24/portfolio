@@ -50,10 +50,10 @@ const Projects = (props) => {
                 {myProject.description}
               </h3>
               <div className="flex gap-7 my-6 ">
-                <Link to="" className="text-[1.5rem]">
+                <Link to={myProject.url} className="text-[1.5rem]">
                   Demo
                 </Link>
-                <Link to="" className="flex items-center gap-2">
+                <Link to={myProject.url} className="flex items-center gap-2">
                   <FaGithub size={25} />
                   <h2 className="text-[1.5rem]">Github</h2>
                 </Link>
