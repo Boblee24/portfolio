@@ -11,7 +11,7 @@ import { AnimatePresence } from "framer-motion";
 import Sidebar from "./components/Sidebar";
 import { createContext, useState } from "react";
 import LanguagesArray from "./data.json";
-// import Preload from "./pages/Preload";
+import Preload from "./pages/Preload";
 
 export const AppContext = createContext();
 function App() {
@@ -58,7 +58,7 @@ function App() {
           toggleSlide
         }}
       >
-        {/* <Preload onLoadingComplete={handleLoadingComplete}/> */}
+        <Preload onLoadingComplete={handleLoadingComplete}/>
         <Header />
         <Sidebar />
         <AnimatePresence>
