@@ -4,7 +4,7 @@ import { MdOutlineMail } from "react-icons/md";
 import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
 import { AppContext } from "../App";
 import seperator from "../assts/separator.svg";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom"; 
 
 const Contact = () => {
   const { Contacts, slide } = useContext(AppContext);
@@ -62,12 +62,13 @@ const Contact = () => {
                     </h3>
                   </div>
                   <h4 className="italic font-semibold">{contact.username}</h4>
-                  <Link
-                    to={contact.url}
+                  <a
+                    href={contact.url}
+                    target="-blank"
                     className="self-start py-2 px-4 bg-black text-[#808080] hover:animate-[]"
                   >
                     Visit <motion.span> &rarr; </motion.span>
-                  </Link>
+                  </a>
                 </div>
               </motion.div>
             );

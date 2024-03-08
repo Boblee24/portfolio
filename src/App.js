@@ -3,17 +3,15 @@ import "./App.css";
 import Header from "./components/Header";
 import Skills from "./pages/Skills";
 import About from "./pages/About";
-// import Projects from './pages/Projects';
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
 import Footer from "./pages/Footer";
 import Projects from "./pages/Projects";
-// import ProjectDuplicate from "./pages/ProjectDuplicate"; i just duoicatec 
 import { AnimatePresence } from "framer-motion";
 import Sidebar from "./components/Sidebar";
 import { createContext, useState } from "react";
 import LanguagesArray from "./data.json";
-import Preload from "./pages/Preload";
+// import Preload from "./pages/Preload";
 
 export const AppContext = createContext();
 function App() {
@@ -60,7 +58,7 @@ function App() {
           toggleSlide
         }}
       >
-        <Preload onLoadingComplete={handleLoadingComplete}/>
+        {/* <Preload onLoadingComplete={handleLoadingComplete}/> */}
         <Header />
         <Sidebar />
         <AnimatePresence>

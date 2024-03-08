@@ -34,7 +34,7 @@ const Projects = (props) => {
         <div
           className={`flex flex-col m-2 gap-2`}
         >
-          <div className="overflow-hidden h-[400px] z-[-1] relative ">
+          <div className="overflow-hidden h-[400px] relative "> 
             <img
               className="duration-[2000ms] h-full w-full z-20 object-top hover:object-bottom  object-cover rounded-lg"
               src={imageFunc(myProject.img)}
@@ -50,10 +50,10 @@ const Projects = (props) => {
                 {myProject.description}
               </h3>
               <div className="flex gap-7 my-6 ">
-                <Link to={myProject.url} className="text-[1.5rem]">
+                <Link to="" className="text-[1.5rem]">
                   Demo
                 </Link>
-                <Link to={myProject.url} className="flex items-center gap-2">
+                <Link to="" className="flex items-center gap-2">
                   <FaGithub size={25} />
                   <h2 className="text-[1.5rem]">Github</h2>
                 </Link>

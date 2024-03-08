@@ -21,7 +21,7 @@
     {
       "id": 4,
       "name": "CSS",
-      "image": "css.png",
+      "image": "css-96.png",
       "level": "Beginner"
     },
     {
@@ -39,37 +39,37 @@
     {
       "id": 7,
       "name": "CSS",
-      "image": "css.png",
+      "image": "html-96.png",
       "level": "Beginner"
     },
     {
       "id": 8,
       "name": "tailwind",
-      "image": "tailwind.png",
+      "image": "figma-96.png",
       "level": "Beginner"
     },
     {
       "id": 9,
       "name": "CSS",
-      "image": "css.png",
+      "image": "github-96.png",
       "level": "Beginner"
     },
     {
       "id": 10,
       "name": "tailwind",
-      "image": "tailwind.png",
+      "image": "react-96.png",
       "level": "Beginner"
     },
     {
       "id": 11,
       "name": "tailwind",
-      "image": "tailwind.png",
+      "image": "bootstrap-96.png",
       "level": "Beginner"
     },
     {
       "id": 12,
       "name": "Git",
-      "image": "git.png",
+      "image": "git-96.png",
       "level": "Beginner"
     }
   ],
