@@ -29,8 +29,7 @@ const Home = () => {
       exit={{ opacity: 0 }}
       id="/"
     >
-      {/* <div className="w-full h-full home hidden"></div> */}
-      <div className="flex relative xxdm:justify-between h-[100vh] xxdm:h-auto w-full xxdm:w-full items-center xxdm:px-[8%] gap-1 overflow-hidden ">
+      <div className="flex relative xxdm:justify-between h-[100vh]  w-full xxdm:w-full items-center xxdm:px-[8%] gap-1 overflow-hidden ">
         <div className="text-center text-white bg-[#525252d2] xxdm:bg-inherit w-full xxdm:w-auto">
           <div className="  p-2 flex flex-col justify-between gap-3 w-full xxdm:p-0">
             <div className="text-[white]">
@@ -45,15 +44,16 @@ const Home = () => {
             <div>
               <button
                 onClick={() => navigate("/contact")}
-                className="px-4 py-3 bg-[black] rounded-lg text-white tracking-widest sidebar xxdm:text-[1.8rem]"
+                className="px-4 py-3 hover:bg-[black] border-2 bg-[#d7d7d7] text-[black] duration-500 hover:scale-[1.05] border-[black] rounded-lg hover:text-white tracking-widest  xxdm:text-[1.8rem]"
               >
                 Contact me
               </button>
+              
             </div>
           </div>
         </div>
-        <div ref={targetRef} className="absolute bottom-6 xxdm:bottom-[-3rem] z-50">
-        <motion.ul style={{x}} className="flex sticky bottom-0">
+        <div ref={targetRef} className="absolute bottom-6 xxdm:bottom-[1rem] ">
+        <motion.ul style={{x}} className="flex sticky ">
           {Languages.map((Language) => (
             <li className="w-[100px] h-[100px] p-2">
               <img src={imageFunc(Language.image)} alt={Language.name} />

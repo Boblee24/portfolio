@@ -3,10 +3,14 @@ import { motion } from "framer-motion";
 import { AppContext } from "../App";
 import HeaderAnimation from "../components/HeaderAnimation";
 import myImage2 from "../assts/ayomiposi2.jpg"
+import { useNavigate } from "react-router-dom";
+
 
 const About = () => {
   const heading = "My Profile";
   const { slide } = useContext(AppContext);
+  const navigate = useNavigate();
+
   return (
     <motion.div
       className=" flex justify-center items-center pt-[3rem]"
@@ -17,21 +21,19 @@ const About = () => {
     >
       <div className=" flex flex-col w-full relative m-2">
         <div
-          className={`bg-[#D7D7D7] z-10 flex items-center justify-center ${
-            slide ? "" : "block"
-          }  w-full `}
+          className={`bg-[#D7D7D7] z-10 flex items-center justify-center w-full `}
         >
           <HeaderAnimation heading={heading} />
         </div>
-        <div className="flex flex-col">
-          <div className="my-3">
-            <img src={myImage2} alt="" className=" rounded-lg"/>
+        <div className="flex flex-col xii:flex-row gap-3 xii:gap-[5%]">
+          <div className="my-3 flex-1 xii:max-w-[500px] xii:max-h-[600px]">
+            <img src={myImage2} alt="" className=" opacity-50 rounded-lg w-full h-full object-cover"/>
           </div>
-          <div className="">
+          <div className="flex-1">
             <p
               className={`text-[1.1rem] p-1 ${
                 slide ? "" : "mt-0"
-              } font-[Poppins] `}
+              } font-[Poppins] xxxdm:leading-[1.7rem] `}
             >
               Hi there! I'm{" "}
               <span className="font-[Poppins] font-semibold">
@@ -53,6 +55,12 @@ const About = () => {
               is to create web applications that not only meet but exceed user
               expectations, providing a smooth and enjoyable digital experience.
             </p>
+            <button
+                onClick={() => navigate("/contact")}
+                className="px-4 py-3 mt-6 hover:bg-[black] rounded-lg hidden xxdm:block hover:text-white border-2 border-[black] tracking-widest sidebar xxdm:text-[1.8rem] hover:scale-[1.1] duration-300"
+              >
+                Contact me
+              </button>
           </div>
         </div>
       </div>

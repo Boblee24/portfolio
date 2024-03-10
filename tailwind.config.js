@@ -19,6 +19,7 @@ module.exports = {
         dm: "830px", 
         xdm: "930px",
         xxdm: "1000px",
+        xxxdm: "1100px",
         ...defaultTheme.screens
       },
       maxWidth : {
