@@ -10,7 +10,7 @@ const Contact = () => {
   const { Contacts, slide } = useContext(AppContext);
   return (
     <motion.div
-      className={` w-full relative flex justify-center items-center pt-[5rem]`}
+      className={` w-full relative z-10 flex justify-center items-center pt-[5rem]`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
