@@ -9,7 +9,7 @@
 }
 
 .text.hidder {
-  border-bottom: 1px solid #fff;
+  border-bottom: 4px solid #000000;
 }
 .text.hidder li.ghost {
   opacity: 0;

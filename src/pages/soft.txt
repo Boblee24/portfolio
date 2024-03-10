@@ -3,3 +3,15 @@ under social receive today sound cereal banner include drift gold conduct suprem
 Line 37 z-[-1] 
 
 <a target="_blank" href="https://icons8.com/icon/20909/html-5">HTML</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+
+
+relative after:absolute after:border-4 after:border-black after:z-[-10] after:content-['*'] after:top-[1.2rem] after:left-[1.2rem] after:w-full after:h-full
+
+
+// import myImage from "../assts/ayomiposi.jpg"
+// import myImage2 from "../assts/ayomi3.png"
+// import myImage3 from "../assts/ayomi1.jpeg";
+import myImage2 from "../assts/ayomiposi2.jpg"
+import myImage2 from "../assts/ayomi.png";
+// import myImage2 from "../assts/ayomiposi1.png";
+// import myImage2 from "../assts/ayomiposi3.png";

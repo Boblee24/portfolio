@@ -1,10 +1,13 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, useContext } from "react";
 import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { AppContext } from "../App";
 import HeaderAnimation from "../components/HeaderAnimation";
 
 
 const Projects = (props) => {
+  const {slide } = useContext(AppContext);
+
   const imageFunc = (string) => {
     const image = require(`../assts/${string}`);
     return image;
@@ -80,7 +83,14 @@ const Projects = (props) => {
 
   return (
     <div id="project" className="pt-[5rem]">
-      <HeaderAnimation heading={heading}/>
+      <div
+          className={`bg-[#D7D7D7] z-10 top-[7rem] flex items-center p-2  ${
+            slide ? "" : "block"
+          } left-0 w-full pb-3 `}
+        >
+             
+        <HeaderAnimation heading={heading}/>
+        </div> 
       <div>{MyProject()}</div>
     </div>
   );

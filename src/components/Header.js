@@ -56,7 +56,7 @@ const Header = () => {
           <li>
             {slide ? (
               <NavLink onClick={toggleClick} className="" to="/about">
-                About
+                Profile
               </NavLink>
             ) : (
               <ScrollLink
@@ -68,7 +68,7 @@ const Header = () => {
                 offset={-70} // Adjust the offset if needed to handle fixed header
                 duration={500}
               >
-                About
+                Profile
               </ScrollLink>
             )}
           </li>

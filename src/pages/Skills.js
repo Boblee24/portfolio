@@ -17,7 +17,7 @@ const Skills = () => {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.5 }}
         className={`grid grid-cols-3 w-full  place-items-center justify-items-between gap-[1rem] ${
-          slide ? "mt-[6rem]" : "mt-[1rem]"
+          slide ? "" : "mt-[1rem]"
         } p-2`}
       >
         {Languages.map((Language) => (
@@ -37,14 +37,13 @@ const Skills = () => {
       id="skills"
     >
       <div className="flex flex-col w-full h-full items-center justify-between">
-        {/* <div
-          className={`bg-[#D7D7D7] z-10 top-0  ${
-            slide ? "fixed" : "block"
+       <div
+          className={`bg-[#D7D7D7] z-10 top-[7rem] flex items-center justify-center ${
+            slide ? "" : "block"
           } left-0 w-full pb-3 m-2`}
         >
-             <
-        </div> */}
         <HeaderAnimation heading={heading}/>
+        </div> 
         <div className="w-full flex justify-center items-center max-w-[700px]">
           {skills()}
         </div>
