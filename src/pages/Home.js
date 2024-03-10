@@ -30,7 +30,7 @@ const Home = () => {
       id="/"
     >
       <div className="flex relative xxdm:justify-between h-[100vh]  w-full xxdm:w-full items-center xxdm:px-[8%] gap-1 overflow-hidden ">
-        <div className="text-center text-white bg-[#525252d2] xxdm:bg-inherit w-full xxdm:w-auto">
+        <div className="text-center text-white xxdm:bg-inherit w-full xxdm:w-auto">
           <div className="  p-2 flex flex-col justify-between gap-3 w-full xxdm:p-0">
             <div className="text-[white]">
               <h2 className="text-[1.1rem] py-1 xxdm:text-[2rem]">HELLO, I'm</h2>
