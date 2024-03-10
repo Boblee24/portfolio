@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { motion } from "framer-motion";
 import { AppContext } from "../App";
-import seperator from "../assts/separator.svg";
+import HeaderAnimation from "../components/HeaderAnimation";
 
 const Skills = () => {
+  const heading = "My Skills"
   const { Languages, slide } = useContext(AppContext);
   const imageFunc = (string) => {
     const image = require(`../assts/${string}`);
@@ -36,20 +37,14 @@ const Skills = () => {
       id="skills"
     >
       <div className="flex flex-col w-full h-full items-center justify-between">
-        <div
+        {/* <div
           className={`bg-[#D7D7D7] z-10 top-0  ${
             slide ? "fixed" : "block"
           } left-0 w-full pb-3 m-2`}
         >
-          <h1
-            className={`text-[2.5rem] font-semibold ${
-              slide ? "mt-[3rem]" : "mt-0"
-            } self-start  `}
-          >
-            My Skills
-          </h1>
-          <img src={seperator} alt="seperator" />
-        </div>
+             <
+        </div> */}
+        <HeaderAnimation heading={heading}/>
         <div className="w-full flex justify-center items-center max-w-[700px]">
           {skills()}
         </div>

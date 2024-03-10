@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { motion } from "framer-motion";
-import seperator from "../assts/separator.svg";
 import { AppContext } from "../App";
+import HeaderAnimation from "../components/HeaderAnimation";
 
 const About = () => {
+  const heading = "My Profile"
   const {slide} = useContext(AppContext)
   return (
     <motion.div
@@ -14,12 +15,13 @@ const About = () => {
       id="about"
     >
       <div className=" flex flex-col w-full relative m-2">
-        <div className={`bg-[#D7D7D7] z-10 ${slide ? "fixed left-0 top-0" : "block"}  w-full pb-3 `}>
+        {/* <div className={`bg-[#D7D7D7] z-10 ${slide ? "fixed left-0 top-0" : "block"}  w-full pb-3 `}>
           <h2 className={`text-[2.5rem] inline-block font-semibold ${slide ? "mt-[3rem]" : "mt-0"} self-start`}>
-            About You
+            
           </h2>
-          <img src={seperator} alt="seperator" />
-        </div>
+          <img src={seperator} alt="seperator"  />
+        </div> */}
+        <HeaderAnimation heading={heading}/>
         <div className="">
           <p className={`text-[1.1rem] p-1 ${slide ? "mt-[8rem]" : "mt-0"} font-[Poppins] `}>
             Hi there! I'm{" "}

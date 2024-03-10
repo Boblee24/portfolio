@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import { MdOutlineMail } from "react-icons/md";
 import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
 import { AppContext } from "../App";
-import seperator from "../assts/separator.svg";
-// import { Link } from "react-router-dom"; 
+import HeaderAnimation from "../components/HeaderAnimation";
 
 const Contact = () => {
+  const heading = "My Contacts";
   const { Contacts, slide } = useContext(AppContext);
   return (
     <motion.div
@@ -19,14 +19,15 @@ const Contact = () => {
       id="contact"
     >
       <div className="flex justify-center flex-col w-full px-2 relative">
-        <div
+        {/* <div
           className={`bg-[#d7d7d7] w-full z-10 ${
             slide ? "fixed top-[3.5rem]" : "block"
           } pb-2`}
         >
           <h1 className="text-[2.5rem] font-semibold">Contact</h1>
           <img src={seperator} alt="seperator" />
-        </div>
+        </div> */}
+        <HeaderAnimation heading={heading} />
         <div className="grid grid-cols-1 xii:grid-cols-2 place-content-center w-full gap-[6rem] my-[4rem] mx-auto">
           {Contacts.map((contact) => {
             const iconComponent = (thatIcon) => {

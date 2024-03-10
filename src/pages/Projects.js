@@ -1,12 +1,15 @@
 import { useRef, useEffect, useState } from "react";
 import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import HeaderAnimation from "../components/HeaderAnimation";
+
 
 const Projects = (props) => {
   const imageFunc = (string) => {
     const image = require(`../assts/${string}`);
     return image;
   };
+  const heading = "My Projects"
 
   const MyProjectItem = ({ myProject }) => {
     const targetRef = useRef();
@@ -77,7 +80,7 @@ const Projects = (props) => {
 
   return (
     <div id="project" className="pt-[5rem]">
-      <h1>Projects</h1>
+      <HeaderAnimation heading={heading}/>
       <div>{MyProject()}</div>
     </div>
   );
