@@ -1,18 +1,16 @@
 import { useRef, useEffect, useState, useContext } from "react";
 import { FaGithub } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { AppContext } from "../App";
 import HeaderAnimation from "../components/HeaderAnimation";
-
+import { AppContext } from "../App";
 
 const Projects = (props) => {
-  const {slide } = useContext(AppContext);
-
+    const {slide} = useContext(AppContext)
   const imageFunc = (string) => {
     const image = require(`../assts/${string}`);
     return image;
   };
-  const heading = "My Projects"
+  const heading = "My Project"
 
   const MyProjectItem = ({ myProject }) => {
     const targetRef = useRef();
@@ -40,7 +38,7 @@ const Projects = (props) => {
         <div
           className={`flex flex-col m-2 gap-2`}
         >
-          <div className="overflow-hidden h-[400px] relative "> 
+          <div className="overflow-hidden h-[400px]  relative ">
             <img
               className="duration-[2000ms] h-full w-full z-20 object-top hover:object-bottom  object-cover rounded-lg"
               src={imageFunc(myProject.img)}
@@ -56,10 +54,10 @@ const Projects = (props) => {
                 {myProject.description}
               </h3>
               <div className="flex gap-7 my-6 ">
-                <Link to="" className="text-[1.5rem]">
+                <Link target="_blank" to={myProject.url} className="text-[1.5rem]">
                   Demo
                 </Link>
-                <Link to="" className="flex items-center gap-2">
+                <Link target="_blank" to={myProject.url} className="flex items-center gap-2">
                   <FaGithub size={25} />
                   <h2 className="text-[1.5rem]">Github</h2>
                 </Link>

@@ -1,47 +1,97 @@
-// // Photos from https://citizenofnowhe.re/lines-of-the-city
-// import "./styles.css";
-// import { useRef } from "react";
-// import {
-//   motion,
-//   useScroll,
-//   useSpring,
-//   useTransform,
-//   MotionValue
-// } from "framer-motion";
+import { useRef, useEffect, useState, useContext } from "react";
+import { FaGithub } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import HeaderAnimation from "../components/HeaderAnimation";
+import { AppContext } from "../App";
 
-// function useParallax(value: MotionValue<number>, distance: number) {
-//   return useTransform(value, [0, 1], [-distance, distance]);
-// }
+const Projects = (props) => {
+    const {slide} = useContext(AppContext)
+  const imageFunc = (string) => {
+    const image = require(`../assts/${string}`);
+    return image;
+  };
+  const heading = "My Project"
 
-// function Image({ id }: { id: number }) {
-//   const ref = useRef(null);
-//   const { scrollYProgress } = useScroll({ target: ref });
-//   const y = useParallax(scrollYProgress, 300);
+  const MyProjectItem = ({ myProject }) => {
+    const targetRef = useRef();
+    const [isVisible, setIsVisible] = useState(false);
 
-//   return (
-//     <section>
-//       <div ref={ref}>
-//         <img src={`/${id}.jpg`} alt="A London skyscraper" />
-//       </div>
-//       <motion.h2 style={{ y }}>{`#00${id}`}</motion.h2>
-//     </section>
-//   );
-// }
+    useEffect(() => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          const entry = entries[0];
+          setIsVisible(entry.isIntersecting);
+        },
+        {
+          threshold: 0.8,
+        }
+      );
+      observer.observe(targetRef.current);
 
-// export default function App() {
-//   const { scrollYProgress } = useScroll();
-//   const scaleX = useSpring(scrollYProgress, {
-//     stiffness: 100,
-//     damping: 30,
-//     restDelta: 0.001
-//   });
+      return () => {
+        observer.disconnect();
+      };
+    }, []);
 
-//   return (
-//     <>
-//       {[1, 2, 3, 4, 5].map((image) => (
-//         <Image id={image} />
-//       ))}
-//       <motion.div className="progress" style={{ scaleX }} />
-//     </>
-//   );
-// }
+    return (
+      <div key={myProject.id} ref={targetRef} className="">
+        <div
+          className={`flex flex-col m-2 gap-2`}
+        >
+          <div className="overflow-hidden h-[400px]  relative ">
+            <img
+              className="duration-[2000ms] h-full w-full z-20 object-top hover:object-bottom  object-cover rounded-lg"
+              src={imageFunc(myProject.img)}
+              alt={myProject.name}
+            />
+            <div
+              className={`absolute bg-[#000000ab] rounded-lg p-2 duration-1000 z-60 h-full w-full top-0 text-white ${
+                isVisible ? "visible" : "notvisible"
+              }`}
+            >
+              <h2 className="text-[2.2rem] font-bold font-[Roboto Condensed] tracking-widest">{myProject.name}</h2>
+              <h3 className="text-[1.1rem] font-regular py-3 font-[Poppins]">
+                {myProject.description}
+              </h3>
+              <div className="flex gap-7 my-6 ">
+                <Link target="_blank" to={myProject.url} className="text-[1.5rem]">
+                  Demo
+                </Link>
+                <Link target="_blank" to={myProject.url} className="flex items-center gap-2">
+                  <FaGithub size={25} />
+                  <h2 className="text-[1.5rem]">Github</h2>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  const MyProject = () => {
+    return (
+      <div className=" flex flex-col gap-[2rem]">
+        {props.myProjects.map((myProject) => (
+          <MyProjectItem key={myProject.id} myProject={myProject} />
+        ))}
+      </div>
+    );
+  };
+
+  return (
+    <div id="project" className="pt-[5rem]">
+      <div
+          className={`bg-[#D7D7D7] z-10 top-[7rem] flex items-center p-2  ${
+            slide ? "" : "block"
+          } left-0 w-full pb-3 `}
+        >
+             
+        <HeaderAnimation heading={heading}/>
+        </div> 
+      <div>{MyProject()}</div>
+    </div>
+  );
+};
+
+export default Projects;

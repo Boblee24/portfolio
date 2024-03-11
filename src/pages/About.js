@@ -27,7 +27,7 @@ const About = () => {
         </div>
         <div className="flex flex-col xii:flex-row gap-3 xii:gap-[5%]">
           <div className="my-3 flex-1 xii:max-w-[500px] xii:max-h-[600px]">
-            <img src={myImage2} alt="" className=" opacity-50 rounded-lg w-full h-full object-cover"/>
+            <img src={myImage2} alt="" className=" rounded-lg w-full h-full object-cover"/>
           </div>
           <div className="flex-1">
             <p
