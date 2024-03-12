@@ -1,5 +1,6 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { motion } from "framer-motion";
+import { Link as ScrollLink } from "react-scroll";
 import { AppContext } from "../App";
 import HeaderAnimation from "../components/HeaderAnimation";
 import myImage2 from "../assts/ayomiposi2.jpg"
@@ -10,6 +11,11 @@ const About = () => {
   const heading = "My Profile";
   const { slide } = useContext(AppContext);
   const navigate = useNavigate();
+  useEffect(() => {
+    if (!slide) {
+      navigate('contact', { spy: true, smooth: true, offset: -70, duration: 500 });
+    }
+  }, [slide, navigate]);
 
   return (
     <motion.div
@@ -19,9 +25,9 @@ const About = () => {
       exit={{ opacity: 0 }}
       id="about"
     >
-      <div className=" flex flex-col w-full relative m-2">
+      <div className=" flex flex-col w-full relative m-2 ">
         <div
-          className={`bg-[#D7D7D7] z-10 flex items-center justify-center w-full `}
+          className={`bg-[#D7D7D7] z-10 flex items-center justify-center w-full mb-[1.5rem]`}
         >
           <HeaderAnimation heading={heading} />
         </div>
@@ -55,12 +61,27 @@ const About = () => {
               is to create web applications that not only meet but exceed user
               expectations, providing a smooth and enjoyable digital experience.
             </p>
-            <button
-                onClick={() => navigate("/contact")}
-                className="px-4 py-3 mt-6 hover:bg-[black] rounded-lg hidden xxdm:block hover:text-white border-2 border-[black] tracking-widest sidebar xxdm:text-[1.8rem] hover:scale-[1.1] duration-300"
-              >
-                Contact me
-              </button>
+            <div className="mt-[3rem] cursor-pointer">
+              {slide ? (
+                <button
+                  onClick={() => navigate("contact")}
+                  className="px-4 py-3 hover:bg-[black] border-2 bg-[#d7d7d7] text-[black] duration-500 hover:scale-[1.05] border-[black] rounded-lg hover:text-white tracking-widest  xxdm:text-[1.8rem]"
+                >
+                  Contact me
+                </button>
+              ) : (
+                <ScrollLink
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  offset={-70} // Adjust the offset if needed to handle fixed header
+                  duration={500}
+                  className="px-4 py-3 hover:bg-[black] border-2 bg-[#d7d7d7] text-[black] duration-500 hover:scale-[1.05] border-[black] rounded-lg hover:text-white tracking-widest  xxdm:text-[1.8rem]"
+                >
+                  Contact me
+                </ScrollLink>
+              )}
+            </div>
           </div>
         </div>
       </div>

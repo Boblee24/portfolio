@@ -42,6 +42,10 @@ button.button-three {
   text-decoration: line-through;
   /* transition: 1000ms; */
 }
+.helloworld a.active::after{
+  background-color: red;
+}
+
 .untranslated { 
   transform: translateX(-100%);
 }
@@ -79,22 +83,30 @@ button.button-three {
     writing-mode: horizontal-tb;
   }
 }
-/* .your-element {
-  position: relative;
-  z-index: 100;
+header-hover:hover {
+  cursor: pointer;
+  color: green;
 }
 
-.your-element::after {
-  content: '';
+.helloworld a {
+  position: relative;
+  cursor: pointer;
+}
+.helloworld a::after {
+  content: "";
   position: absolute;
-  border: 4px solid black;
-  z-index: 1;
-  top: 1.2rem;
-  left: 1.2rem;
-  width: 100%;
-  height: 100%;
-} */
-
-/* .your-element:hover {
-  scale: 1.1;
-} */
+  bottom: 0;
+  width:100% ;
+  height: 2px;
+  left: 0;
+  color: black;
+  background-color: black;
+  scale: 00;
+  /* border-bottom: 0px; */
+  transition: 500ms;
+  cursor: pointer;
+}
+.helloworld a:hover::after {
+  scale: 1;
+  transform-origin: center;
+}

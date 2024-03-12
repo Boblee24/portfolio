@@ -7,7 +7,7 @@ import HeaderAnimation from "../components/HeaderAnimation";
 
 const Contact = () => {
   const heading = "My Contacts";
-  const { Contacts, slide } = useContext(AppContext);
+  const { Contacts } = useContext(AppContext);
   return (
     <motion.div
       className={` w-full relative z-10 flex justify-center items-center pt-[5rem]`}
@@ -18,9 +18,7 @@ const Contact = () => {
     >
       <div className="flex justify-center flex-col w-full px-2 relative">
         <div
-          className={`bg-[#d7d7d7] w-full  flex items-center justify-center ${
-            slide ? "" : "block"
-          } pb-2`}
+          className={`bg-[#d7d7d7] w-full  flex items-center justify-center pb-2`}
         >
         <HeaderAnimation heading={heading} />
         </div>

@@ -11,7 +11,7 @@ const Header = () => {
   const { toggle, toggleClick, toggleSlide, slide } = useContext(AppContext);
 
   return (
-    <div className="fixed flex  w-full items-center z-20 bg-[#d7d7d7fc]">
+    <div className="fixed flex  w-full items-center z-20 bg-[#d7d7d7fc] helloworld">
       <div className="flex justify-between w-full items-center">
         <h1 className="z-20 p-3 duration-700">
           <Link className="text-[1.5rem] font-semibold duration-700" to="/">
@@ -29,7 +29,7 @@ const Header = () => {
       </div>
       <Harmbuger />
       <div
-        className={`absolute bg-[#d7d7d7f9] md:bg-inherit my-[3.5rem] md:m-0 top-0 h-[100vh] md:h-auto md:static  w-full duration-700 ${
+        className={`absolute bg-[#d7d7d7f9] md:bg-inherit my-[3.5rem] md:m-0 top-0 h-[100vh] md:h-auto md:static  w-full duration-700 z-[100]${
           toggle ? "translated" : "untranslated"
         } `}
       >
@@ -55,7 +55,7 @@ const Header = () => {
           </li>
           <li>
             {slide ? (
-              <NavLink onClick={toggleClick} className="" to="/about">
+              <NavLink onClick={toggleClick} className="header-hover" to="/about">
                 Profile
               </NavLink>
             ) : (
