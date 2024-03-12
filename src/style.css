@@ -37,6 +37,12 @@ button.button-three {
   background-color: unset !important;
   padding: 0 !important;
 }
+.untranslated { 
+  transform: translateX(-100%);
+}
+.translated {
+  transform: translateX(0%);
+}
 .active{
   color: red;
   text-decoration: line-through;
@@ -44,13 +50,6 @@ button.button-three {
 }
 .helloworld a.active::after{
   background-color: red;
-}
-
-.untranslated { 
-  transform: translateX(-100%);
-}
-.translated {
-  transform: translateX(0%);
 }
 .visible {
   opacity: 1;

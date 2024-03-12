@@ -29,7 +29,7 @@ const Header = () => {
       </div>
       <Harmbuger />
       <div
-        className={`absolute bg-[#d7d7d7f9] md:bg-inherit my-[3.5rem] md:m-0 top-0 h-[100vh] md:h-auto md:static  w-full duration-700 z-[100]${
+        className={`absolute bg-[#d7d7d7f9] md:bg-inherit my-[3.5rem] md:m-0 top-0 h-[100vh] md:h-auto md:static  w-full duration-700 z-[100] ${
           toggle ? "translated" : "untranslated"
         } `}
       >
