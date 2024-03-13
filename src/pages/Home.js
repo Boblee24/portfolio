@@ -1,11 +1,7 @@
 import React, { useContext, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-// import myImage from "../assts/ayomiposi.jpg"
 import { Link as ScrollLink } from "react-scroll";
 import myImage2 from "../assts/ayomi.png";
-// import myImage2 from "../assts/ayomiposi1.png";
-// import myImage2 from "../assts/ayomi3.png"
-// import myImage3 from "../assts/ayomi1.jpeg";
 import { useNavigate } from "react-router-dom";
 import { AppContext } from "../App";
 
@@ -88,7 +84,7 @@ const Home = () => {
         </div>
         <div className=" hidden xxdm:block w-[150%] xx:w-[120%] left-[-3rem] xx:top-[-6rem] xx:left-[-1rem] top-[-4rem] xii:w-auto xii:left-[6rem] dm:top-[-8rem] absolute xdm:top-[-30%] xdm:left-[20%] xxdm:static ">
           <div className="xxdm:h-[400px] xxdm:w-[400px] xxdm:relative xxdm:border-2 xxdm:border-[#d7d7d7] z-[8]">
-            <div className="hello group-hover:bg-[#808080] duration-700  ease-in-out transition top-[2rem] xxdm:left-[2rem] xxdm:border-2xxdm:border-white xxdm:z-[-10]"></div>
+            <div className="hello group-hover:bg-[#808080] duration-700  ease-in-out transition top-[2rem] xxdm:left-[2rem] xxdm:border-2xxdm:border-white xxdm:top-[1rem] xxdm:z-[-10]"></div>
             <div className="w-full h-full overflow-hidden z-1 bg-[#1e1e1e]">
               <img
                 src={myImage2}

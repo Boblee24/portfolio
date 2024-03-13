@@ -107,6 +107,7 @@
     {
       "id":1,
       "img": "about.png",
+      "sideimg" : "tradiant.png",
       "stack" :"tailwindcss" ,
       "name": "Tradiant",
       "github" : "https://github.com/Boblee24/coinhub",
@@ -115,17 +116,9 @@
 
     },
     {
-      "id":2,
-      "img": "about.png",
-      "stack" :"tailwindcss" ,
-      "name": "Quizzical",
-      "github" : "https://github.com/Boblee24/quiziccal",
-      "url": "https://bob-quizzify.netlify.app/",
-      "description": " Engaging quiz app for knowledge enthusiasts. Features diverse categories, scoring, and interactive challenges for an entertaining learning experience."
-    },
-    {
       "id":3,
       "img": "quizzical.png",
+      "sideimg" : "quizzical.png",
       "stack" :"tailwindcss" ,
       "name": "Quizzical",
       "github" : "https://github.com/Boblee24/quiziccal",
@@ -135,8 +128,10 @@
     {
       "id":4,
       "img": "rogue.png",
+      "sideimg" : "rogue.png",
       "stack" :"tailwindcss" ,
       "name": "Rogue Clone",
+      "languagesArray" : ["HTML", "CSS", "React.JS"],
       "github" : "https://github.com/Boblee24/Rogue",
       "url": "https://ayomi-rogue.netlify.app/",
       "description": " Engaging quiz app for knowledge enthusiasts. Features diverse categories, scoring, and interactive challenges for an entertaining learning experience."
@@ -144,10 +139,22 @@
     {
       "id":5,
       "img": "bookmark.png",
+      "sideimg" : "bookmark.png",
       "stack" :"tailwindcss" ,
       "name": "Bookmark",
+      "languagesArray" : ["HTML", "CSS", "React.JS"],
       "github" : "https://github.com/Boblee24/Bookmark.github.io",
       "url": "https://ayo-bookmark.netlify.app/",
+      "description": " Engaging quiz app for knowledge enthusiasts. Features diverse categories, scoring, and interactive challenges for an entertaining learning experience."
+    },
+    {
+      "id":2,
+      "img": "about.png",
+      "sideimg" : "tradiant.png",
+      "stack" :"tailwindcss" ,
+      "name": "Quizzical",
+      "github" : "https://github.com/Boblee24/quiziccal",
+      "url": "https://bob-quizzify.netlify.app/",
       "description": " Engaging quiz app for knowledge enthusiasts. Features diverse categories, scoring, and interactive challenges for an entertaining learning experience."
     }
   ]

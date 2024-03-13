@@ -44,12 +44,11 @@ button.button-three {
   transform: translateX(0%);
 }
 .active{
-  color: red;
-  text-decoration: line-through;
+  color: rgb(1, 0, 82);
   /* transition: 1000ms; */
 }
 .helloworld a.active::after{
-  background-color: red;
+  background-color: #010052;
 }
 .visible {
   opacity: 1;

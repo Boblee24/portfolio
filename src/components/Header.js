@@ -11,13 +11,13 @@ const Header = () => {
   const { toggle, toggleClick, toggleSlide, slide } = useContext(AppContext);
 
   return (
-    <div className="fixed flex  w-full items-center z-20 bg-[#d7d7d7fc] helloworld">
+    <div className="fixed flex  w-full items-center z-20 backdrop-blur-lg bg-[#a8a8a8fc] helloworld">
       <div className="flex justify-between w-full items-center">
-        <h1 className="z-20 p-3 duration-700">
-          <Link className="text-[1.5rem] font-semibold duration-700" to="/">
-            {toggle ? "EMMANUEL" : "AYOMI"}
-          </Link>
-        </h1>
+        <Link className="text-[1.5rem] font-semibold duration-700" to="/">
+          <h1 className="z-20 p-2 duration-700">
+            AYO<span className="text-[#010052]">MI</span>
+          </h1>
+        </Link>
         <button
           className={`mr-[4rem] z-20 p-2 duration-500 ${
             slide ? "rotate-90" : ""
@@ -55,7 +55,11 @@ const Header = () => {
           </li>
           <li>
             {slide ? (
-              <NavLink onClick={toggleClick} className="header-hover" to="/about">
+              <NavLink
+                onClick={toggleClick}
+                className="header-hover"
+                to="/about"
+              >
                 Profile
               </NavLink>
             ) : (
@@ -72,7 +76,7 @@ const Header = () => {
               </ScrollLink>
             )}
           </li>
-          
+
           <li>
             {slide ? (
               <NavLink onClick={toggleClick} className="" to="/skills">

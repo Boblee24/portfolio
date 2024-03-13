@@ -73,10 +73,6 @@ function App() {
               path="projects"
               element={<Projects myProjects={myProjects} />}
             />
-            {/* <Route
-              path="projects"
-              element={<ProjectDuplicate myProjects={myProjects} />}
-            /> */}
             <Route path="*" element={<h1> PAGE NOT FOUND</h1>} />
           </Routes>
           :
