@@ -43,10 +43,10 @@ const Header = () => {
               <ScrollLink
                 onClick={toggleClick}
                 className=""
-                to="/" // Replace with the actual target section's ID
+                to="/" 
                 spy={true}
                 smooth={true}
-                offset={-70} // Adjust the offset if needed to handle fixed header // alright
+                offset={-70} 
                 duration={500}
               >
                 Home
@@ -66,10 +66,10 @@ const Header = () => {
               <ScrollLink
                 onClick={toggleClick}
                 className=""
-                to="about" // Replace with the actual target section's ID
+                to="about" 
                 spy={true}
                 smooth={true}
-                offset={-70} // Adjust the offset if needed to handle fixed header
+                offset={-70} 
                 duration={500}
               >
                 Profile
@@ -86,10 +86,10 @@ const Header = () => {
               <ScrollLink
                 onClick={toggleClick}
                 className=""
-                to="skills" // Replace with the actual target section's ID
+                to="skills" 
                 spy={true}
                 smooth={true}
-                offset={-70} // Adjust the offset if needed to handle fixed header
+                offset={-70} 
                 duration={500}
               >
                 Skills
@@ -105,10 +105,10 @@ const Header = () => {
               <ScrollLink
                 onClick={toggleClick}
                 className=""
-                to="project" // Replace with the actual target section's ID
+                to="project" 
                 spy={true}
                 smooth={true}
-                offset={-70} // Adjust the offset if needed to handle fixed header
+                offset={-70} 
                 duration={500}
               >
                 Projects
@@ -124,10 +124,10 @@ const Header = () => {
               <ScrollLink
                 onClick={toggleClick}
                 className=""
-                to="contact" // Replace with the actual target section's ID
+                to="contact" 
                 spy={true}
                 smooth={true}
-                offset={-70} // Adjust the offset if needed to handle fixed header
+                offset={-70} 
                 duration={500}
               >
                 Contact

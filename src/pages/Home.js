@@ -63,7 +63,7 @@ const Home = () => {
                   to="contact"
                   spy={true}
                   smooth={true}
-                  offset={-70} // Adjust the offset if needed to handle fixed header
+                  offset={-70} // Adjusting the offset if needed to handle fixed header
                   duration={500}
                   className="px-4 py-3 hover:bg-[black] border-2 bg-[#d7d7d7] text-[black] duration-500 hover:scale-[1.05] border-[black] rounded-lg hover:text-white tracking-widest  xxdm:text-[1.8rem]"
                 >

@@ -36,7 +36,6 @@ function App() {
   const toggleSlide = () => {
     setSlide((prev) => !prev)
   }
-  // Preload screen 
   const [loadingComplete, setLoadingComplete] = useState(false);
 
   const handleLoadingComplete = () => {

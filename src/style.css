@@ -45,7 +45,6 @@ button.button-three {
 }
 .active{
   color: rgb(1, 0, 82);
-  /* transition: 1000ms; */
 }
 .helloworld a.active::after{
   background-color: #010052;
@@ -58,12 +57,6 @@ button.button-three {
   opacity: 1;
   transform: translateY(100%);
 }
-/* .cursor{
-  cursor: pointer;
-} */
-/* .parent:hover .parent::after{
-    z-index: 0;
-} */
 @media screen and (min-width: 768px){
   .untranslated { 
     transform: translateX(0%);
