@@ -12,6 +12,7 @@ import Sidebar from "./components/Sidebar";
 import { createContext, useState } from "react";
 import LanguagesArray from "./data.json";
 import Preload from "./pages/Preload";
+import UpdateAbout from "./pages/UpdateAbout";
 
 export const AppContext = createContext();
 function App() {
@@ -66,7 +67,7 @@ function App() {
             <Routes location={location} key={location.pathname}>
             <Route index element={<Home />} />
             <Route path="skills" key="Skills" element={<Skills />} />
-            <Route path="about" element={<About />} />
+            <Route path="about" element={<UpdateAbout />} />
             <Route path="contact" element={<Contact />} />
             <Route
               path="projects"
@@ -77,7 +78,7 @@ function App() {
           :
           <div>
             <Home/>
-          <About/>
+          <UpdateAbout/>
           <Skills/>
           <Projects myProjects={myProjects}/>
           <Contact/>
