@@ -7,7 +7,7 @@ const Skills = () => {
   const heading = "My Skills"
   const { Languages, slide } = useContext(AppContext);
   const imageFunc = (string) => {
-    const image = require(`../assts/${string}`);
+    const image = require(`../assts/${string}`);//dynamically puts the inputted name in the function to return the src
     return image;
   };
   const skills = () => {
