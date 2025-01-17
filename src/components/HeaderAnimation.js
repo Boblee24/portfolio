@@ -26,7 +26,7 @@ const HeaderAnimation = ({heading}) => {
         setLetters(letterArray)
     }, [heading])
   return (
-    <ul ref={targetRef} className='text hidder'>
+    <ul ref={targetRef} className='text hidder '>
     {letters.map((letter, index) => (
         <li key={index} className={`${letter === letters[0] ? '' : letter === letters[3] ? "spaced" : visible ? "" : "ghost"} ${letter === letters[3] ? visible ? "pl-3" : "pl-0" : ""}`}>
             {letter}

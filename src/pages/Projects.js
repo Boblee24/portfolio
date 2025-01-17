@@ -11,7 +11,7 @@ const Projects = (props) => {
     const image = require(`../assts/${string}`);
     return image;
   };
-  const heading = "My Project";
+  const heading = "My Projects";
 
   const MyProjectItem = ({ myProject }) => {
     const targetRef = useRef();

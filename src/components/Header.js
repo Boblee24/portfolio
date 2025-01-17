@@ -2,30 +2,31 @@ import React, { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Link as ScrollLink } from "react-scroll";
 import { MdOutlineMail } from "react-icons/md";
-import { CgScrollV } from "react-icons/cg";
+// import { CgScrollV } from "react-icons/cg";
 import { FaLinkedin, FaTwitter, FaGithub } from "react-icons/fa";
 import Harmbuger from "./harmbuger";
 import { AppContext } from "../App";
 
 const Header = () => {
-  const { toggle, toggleClick, toggleSlide, slide } = useContext(AppContext);
+  const { toggle, toggleClick, slide } = useContext(AppContext);
+  
 
   return (
     <div className="fixed flex  w-full items-center z-20 backdrop-blur-lg bg-[#a8a8a8fc] helloworld">
       <div className="flex justify-between w-full items-center">
         <Link className="text-[1.5rem] font-semibold duration-700" to="/">
-          <h1 className="z-20 p-2 duration-700">
+          <h1 className="z-20 p-2 duration-700 font-bold">
             AYO<span className="text-[#010052]">MI</span>
           </h1>
         </Link>
-        <button
+        {/* <button
           className={`mr-[4rem] z-20 p-2 duration-500 ${
             slide ? "rotate-90" : ""
           }`}
           onClick={toggleSlide}
         >
           <CgScrollV size={25} />
-        </button>
+        </button> */}
       </div>
       <Harmbuger />
       <div

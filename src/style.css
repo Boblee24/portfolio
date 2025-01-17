@@ -70,8 +70,8 @@ button.button-three {
     clip-path: none;
   }
   .sidebar {
-    /* writing-mode: sideways-lr; */
-    writing-mode: horizontal-tb;
+    writing-mode: sideways-lr;
+    /* writing-mode: horizontal-tb; */
   }
 }
 header-hover:hover {

@@ -4,14 +4,29 @@ import { Link as ScrollLink } from "react-scroll";
 import myImage2 from "../assts/ayomi.png";
 import { useNavigate } from "react-router-dom";
 import { AppContext } from "../App";
+// import Slider from "react-slick";
+
 
 const Home = () => {
-  const { Languages, slide } = useContext(AppContext);
+  const { Languages, slide, setSlide } = useContext(AppContext);
   const navigate = useNavigate();
   const imageFunc = (string) => {
     const image = require(`../assts/${string}`);
     return image;
   };
+  
+  useEffect(() => {
+    // Function to handle screen size changes
+    const handleResize = () => {
+      const isMobile = window.matchMedia("(min-width: 768px)").matches;
+      setSlide(isMobile);
+    };
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  },);
 
   useEffect(() => {
     if (!slide) {
@@ -28,6 +43,16 @@ const Home = () => {
     target: targetRef,
   });
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+  // const settings = {
+  //   // dots: true,
+  //   infinite: true,
+  //   // slidesToShow: 6,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   speed: 2000,
+  //   autoplaySpeed: 2000,
+  //   cssEase: "linear",
+  // };
   return (
     <motion.div
       className=" h-[100dvh] bg-[#1e1e1e] flex justify-center items-center overflow-hidden"
@@ -73,14 +98,34 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div ref={targetRef} className="absolute bottom-6 xxdm:bottom-[1rem] ">
-          <motion.ul style={{ x }} className="flex sticky ">
-            {Languages.map((Language) => (
-              <li className="w-[100px] h-[100px] p-2">
-                <img src={imageFunc(Language.image)} alt={Language.name} />
-              </li>
-            ))}
-          </motion.ul>
+        <div
+          ref={targetRef}
+          className="absolute h-[100px] bottom-6 xxdm:bottom-[1rem] z-30"
+        >
+          {slide ? (
+            <div className="flex w-full">
+              {Languages.map((Language) => (
+                <div className="w-[100px] h-[100px] p-2">
+                  <img src={imageFunc(Language.image)} alt={Language.name} className="w-full h-full"/>
+                </div>
+              ))}
+              </div>
+            // <motion.ul style={{ x }} className="flex ">
+            //   {Languages.map((Language) => (
+            //     <li className="w-[100px] h-[100px] p-2">
+            //       <img src={imageFunc(Language.image)} alt={Language.name} />
+            //     </li>
+            //   ))}
+            // </motion.ul>
+          ) : (
+            <motion.ul style={{ x }} className="flex ">
+              {Languages.map((Language) => (
+                <li className="w-[100px] h-[100px] p-2">
+                  <img src={imageFunc(Language.image)} alt={Language.name} />
+                </li>
+              ))}
+            </motion.ul>
+          )}
         </div>
         <div className=" hidden xxdm:block w-[150%] xx:w-[120%] left-[-3rem] xx:top-[-6rem] xx:left-[-1rem] top-[-4rem] xii:w-auto xii:left-[6rem] dm:top-[-8rem] absolute xdm:top-[-30%] xdm:left-[20%] xxdm:static ">
           <div className="xxdm:h-[400px] xxdm:w-[400px] xxdm:relative xxdm:border-2 xxdm:border-[#d7d7d7] z-[8]">
