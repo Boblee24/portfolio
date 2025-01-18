@@ -4,7 +4,6 @@ import { Link as ScrollLink } from "react-scroll";
 import myImage2 from "../assts/ayomi.png";
 import { useNavigate } from "react-router-dom";
 import { AppContext } from "../App";
-// import Slider from "react-slick";
 
 
 const Home = () => {
@@ -16,7 +15,6 @@ const Home = () => {
   };
   
   useEffect(() => {
-    // Function to handle screen size changes
     const handleResize = () => {
       const isMobile = window.matchMedia("(min-width: 768px)").matches;
       setSlide(isMobile);
@@ -43,19 +41,9 @@ const Home = () => {
     target: targetRef,
   });
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
-  // const settings = {
-  //   // dots: true,
-  //   infinite: true,
-  //   // slidesToShow: 6,
-  //   slidesToScroll: 1,
-  //   autoplay: true,
-  //   speed: 2000,
-  //   autoplaySpeed: 2000,
-  //   cssEase: "linear",
-  // };
   return (
     <motion.div
-      className=" h-[100dvh] bg-[#1e1e1e] flex justify-center items-center overflow-hidden"
+      className=" h-[100dvh] bg-[#313131] flex justify-center items-center overflow-hidden"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -78,7 +66,7 @@ const Home = () => {
             <div className="cursor-pointer">
               {slide ? (
                 <button
-                  onClick={() => navigate("contact")}
+                  onClick={() => navigate("/contact")}
                   className="px-4 py-3 hover:bg-[black] border-2 bg-[#d7d7d7] text-[black] duration-500 hover:scale-[1.05] border-[black] rounded-lg hover:text-white tracking-widest  xxdm:text-[1.8rem]"
                 >
                   Contact me
@@ -106,17 +94,14 @@ const Home = () => {
             <div className="flex w-full">
               {Languages.map((Language) => (
                 <div className="w-[100px] h-[100px] p-2">
-                  <img src={imageFunc(Language.image)} alt={Language.name} className="w-full h-full"/>
+                  <img
+                    src={imageFunc(Language.image)}
+                    alt={Language.name}
+                    className="w-full h-full"
+                  />
                 </div>
               ))}
-              </div>
-            // <motion.ul style={{ x }} className="flex ">
-            //   {Languages.map((Language) => (
-            //     <li className="w-[100px] h-[100px] p-2">
-            //       <img src={imageFunc(Language.image)} alt={Language.name} />
-            //     </li>
-            //   ))}
-            // </motion.ul>
+            </div>
           ) : (
             <motion.ul style={{ x }} className="flex ">
               {Languages.map((Language) => (
@@ -130,7 +115,7 @@ const Home = () => {
         <div className=" hidden xxdm:block w-[150%] xx:w-[120%] left-[-3rem] xx:top-[-6rem] xx:left-[-1rem] top-[-4rem] xii:w-auto xii:left-[6rem] dm:top-[-8rem] absolute xdm:top-[-30%] xdm:left-[20%] xxdm:static ">
           <div className="xxdm:h-[400px] xxdm:w-[400px] xxdm:relative xxdm:border-2 xxdm:border-[#d7d7d7] z-[8]">
             <div className="hello group-hover:bg-[#808080] duration-700  ease-in-out transition top-[2rem] xxdm:left-[2rem] xxdm:border-2xxdm:border-white xxdm:top-[1rem] xxdm:z-[-10]"></div>
-            <div className="w-full h-full overflow-hidden z-1 bg-[#1e1e1e]">
+            <div className="w-full h-full overflow-hidden z-1 bg-[#313131]">
               <img
                 src={myImage2}
                 className="w-full h-full xxdm:h-auto opacity-[1] "

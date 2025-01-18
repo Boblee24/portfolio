@@ -49,6 +49,10 @@ button.button-three {
 .helloworld a.active::after{
   background-color: #010052;
 }
+.sharp {
+    writing-mode: vertical-lr;
+    /* writing-mode: horizontal-tb; */
+  }
 .visible {
   opacity: 1;
   transform: translateY(0%);
@@ -69,10 +73,7 @@ button.button-three {
   .home{
     clip-path: none;
   }
-  .sidebar {
-    writing-mode: sideways-lr;
-    /* writing-mode: horizontal-tb; */
-  }
+  
 }
 header-hover:hover {
   cursor: pointer;

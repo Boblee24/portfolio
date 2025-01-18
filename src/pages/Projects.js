@@ -35,7 +35,7 @@ const Projects = (props) => {
     }, []);
 
     return (
-        <div key={myProject.id} ref={targetRef} className={`flex flex-col m-2 gap-2`}>
+        <div key={myProject.id} ref={targetRef} className={`flex flex-col m-2 xii:m-12 gap-2`}>
           <div className="overflow-hidden h-[400px] xxdm:h-[600px]  relative ">
             <img
               className="duration-[2000ms] h-full w-full z-20 object-top object-cover rounded-lg"
@@ -95,7 +95,7 @@ const Projects = (props) => {
   return (
     <div id="project" className="pt-[5rem]">
       <div
-        className={`bg-[#D7D7D7] z-10 top-[7rem] flex items-center p-2  ${
+        className={`bg-[#D7D7D7] z-10 top-[7rem] flex items-center p-2 justify-center  ${
           slide ? "" : "block"
         } left-0 w-full pb-3 `}
       >

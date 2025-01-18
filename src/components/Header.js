@@ -12,29 +12,21 @@ const Header = () => {
   
 
   return (
-    <div className="fixed flex  w-full items-center z-20 backdrop-blur-lg bg-[#a8a8a8fc] helloworld">
+    <div className="fixed flex  w-full items-center z-[10000000] backdrop-blur-lg bg-[#a8a8a8fc] helloworld">
       <div className="flex justify-between w-full items-center">
         <Link className="text-[1.5rem] font-semibold duration-700" to="/">
           <h1 className="z-20 p-2 duration-700 font-bold">
             AYO<span className="text-[#010052]">MI</span>
           </h1>
         </Link>
-        {/* <button
-          className={`mr-[4rem] z-20 p-2 duration-500 ${
-            slide ? "rotate-90" : ""
-          }`}
-          onClick={toggleSlide}
-        >
-          <CgScrollV size={25} />
-        </button> */}
       </div>
       <Harmbuger />
       <div
-        className={`absolute bg-[#d7d7d7f9] md:bg-inherit my-[3.5rem] md:m-0 top-0 h-[100vh] md:h-auto md:static  w-full duration-700 z-[100] ${
+        className={`absolute bg-[#d7d7d7] md:bg-inherit my-[3.1rem] md:m-0 top-0 h-[100vh] md:h-auto md:static  w-full duration-700 z-[100] ${
           toggle ? "translated" : "untranslated"
         } `}
       >
-        <ul className=" justify-around w-full md:flex-row flex gap-9 font-semibold  flex-col p-3 pt-[2rem] items-center text-[2rem] md:text-[1.2rem] text-black md:p-3 duration-700">
+        <ul className=" justify-around w-full md:flex-row flex gap-9 font-semibold  flex-col p-3 pt-[1.8rem] items-center text-[2rem] md:text-[1.2rem] text-black md:p-3 duration-700">
           <li>
             {slide ? (
               <NavLink onClick={toggleClick} className="" to="/">
@@ -44,10 +36,10 @@ const Header = () => {
               <ScrollLink
                 onClick={toggleClick}
                 className=""
-                to="/" 
+                to="/"
                 spy={true}
                 smooth={true}
-                offset={-70} 
+                offset={-70}
                 duration={500}
               >
                 Home
@@ -67,10 +59,10 @@ const Header = () => {
               <ScrollLink
                 onClick={toggleClick}
                 className=""
-                to="about" 
+                to="about"
                 spy={true}
                 smooth={true}
-                offset={-70} 
+                offset={-70}
                 duration={500}
               >
                 Profile
@@ -87,10 +79,10 @@ const Header = () => {
               <ScrollLink
                 onClick={toggleClick}
                 className=""
-                to="skills" 
+                to="skills"
                 spy={true}
                 smooth={true}
-                offset={-70} 
+                offset={-70}
                 duration={500}
               >
                 Skills
@@ -106,10 +98,10 @@ const Header = () => {
               <ScrollLink
                 onClick={toggleClick}
                 className=""
-                to="project" 
+                to="project"
                 spy={true}
                 smooth={true}
-                offset={-70} 
+                offset={-70}
                 duration={500}
               >
                 Projects
@@ -125,10 +117,10 @@ const Header = () => {
               <ScrollLink
                 onClick={toggleClick}
                 className=""
-                to="contact" 
+                to="contact"
                 spy={true}
                 smooth={true}
-                offset={-70} 
+                offset={-70}
                 duration={500}
               >
                 Contact
@@ -138,29 +130,24 @@ const Header = () => {
         </ul>
         <ul className="flex flex-col p-3 gap-5 md:hidden">
           <li>
-            <Link to="">
+            <a href="mailto:ayomiposiaborisade6@gmail.com">
               <MdOutlineMail className="text-[black]" size={25} />
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to="https://github.com/Boblee24">
+            <a href="https://github.com/Boblee24">
               <FaGithub className="text-[black]" size={25} />{" "}
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to="">
+            <a href="https://www.linkedin.com/in/ayomiposi24/">
               <FaLinkedin className="text-[black]" size={25} />{" "}
-            </Link>
+            </a>
           </li>
           <li>
-            <Link to="">
+            <a href="https://twitter.com/BOBLEE_AYO">
               <FaTwitter className="text-[black]" size={25} />{" "}
-            </Link>
-          </li>
-          <li>
-            <Link to="">
-              <FaLinkedin className="text-[black]" size={25} />{" "}
-            </Link>
+            </a>
           </li>
         </ul>
       </div>

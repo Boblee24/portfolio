@@ -20,7 +20,7 @@ const Contact = () => {
         <div
           className={`bg-[#d7d7d7] w-full  flex items-center justify-center pb-2`}
         >
-        <HeaderAnimation heading={heading} />
+          <HeaderAnimation heading={heading} />
         </div>
         <div className="grid grid-cols-1 xii:grid-cols-2 place-content-center w-full gap-[6rem] my-[4rem] mx-auto">
           {Contacts.map((contact) => {
@@ -45,13 +45,12 @@ const Contact = () => {
                 animate={{ opacity: 1, delay: 0.5, y: 0 }}
                 exit={{ opacity: 1, delay: 0.5, y: 0 }}
                 transition={{ delay: 0, duration: 0.1 }}
-                className=" w-[290px] h-[150px] xii:h-[150px] xii:w-[290px] xx:w-[320px] xx:h-[160px] dm:h-[160px] dm:w-[320px] relative z-[100] m-auto hover:cursor-pointer   group hover:scale-[1.1]"
+                className="relative w-[290px] h-[150px] xii:h-[150px] xii:w-[290px] xx:w-[320px] xx:h-[160px] dm:h-[160px] dm:w-[320px] m-auto group hover:cursor-pointer hover:scale-[1.1]"
                 key={contact.id}
               >
-                
-                <div className=" z-[100000] border-b-2 border-l-2 p-4 group-hover:scale-[1.1] hover:text-white hover:bg-black border-black h-full gap-2  duration-700 bg-[#b0b0b0] flex flex-col  after:absolute after:border-4 after:border-black  after:z-[-2] after:content-[''] after:top-[1.2rem] after:left-[1.2rem] after:w-full after:h-full ">
+                <div className="relative z-[1] border-b-2 border-l-2 p-4 hover:text-white group-hover:scale-[1.1] hover:bg-[black] border-black h-full gap-2 duration-700 bg-[#b0b0b0] flex flex-col">
                   <div className="flex gap-2">
-                    <div className="">{getIcon}</div>
+                    <div>{getIcon}</div>
                     <h3 className="text-[1.4rem] font-semibold">
                       {contact.name}
                     </h3>
@@ -59,12 +58,16 @@ const Contact = () => {
                   <h4 className="italic font-semibold">{contact.username}</h4>
                   <a
                     href={contact.url}
-                    target="-blank"
-                    className="self-start py-2 px-4 bg-black text-[#808080] hover:animate-[]"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="self-start py-2 px-4 bg-black text-[#808080] group-hover:bg-[#808080] font-bold duration-700"
                   >
-                    Visit <motion.span> &rarr; </motion.span>
+                    <span className="group-hover:text-[black] duration-700">
+                      Visit <motion.span> &rarr; </motion.span>
+                    </span>
                   </a>
                 </div>
+                <div className="absolute z-[-1] border-4 border-black top-[1.2rem] left-[1.2rem] w-full h-full bg-transparent group-hover:scale-[1.1] duration-700"></div>
               </motion.div>
             );
           })}

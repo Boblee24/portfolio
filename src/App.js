@@ -14,7 +14,6 @@ import Sidebar from "./components/Sidebar";
 import { createContext, useState, useEffect } from "react";
 import LanguagesArray from "./data.json";
 import Preload from "./pages/Preload";
-// import About from "./pages/About";
 
 export const AppContext = createContext();
 function App() {

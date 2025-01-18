@@ -9,7 +9,7 @@
     {
       "id": 2,
       "name": "SASS",
-      "image": "sass.png",
+      "image": "nextjs-96.png",
       "level": "Beginner"
     },
     {
@@ -78,29 +78,29 @@
       "id": 1,
       "icon" :"MdOutlineMail",
       "name": "Email",
-      "url": "url",
-      "username": "This is the Username"
+      "url": "mailto:ayomiposiaborisade6@gmail.com",
+      "username": "ayomiposiaborisade6@gmail.com"
     },
     {
       "id": 2,
       "icon" :"LinkedIn" ,
       "name": "LinkedIn",
-      "url": "https://www.linkedin.com/in/ayomiposi-aborisade-74859922a/",
-      "username": "This is the Username"
+      "url": "https://www.linkedin.com/in/ayomiposi24/",
+      "username": "Ayomiposi Aborisade"
     },
     {
       "id":3,
       "icon" :"Twitter" ,
       "name": "Twitter",
       "url": "https://twitter.com/BOBLEE_AYO",
-      "username": "This is the Username"
+      "username": "@Ayomi_devv"
     },
     {
       "id":4,
       "icon" :"Github" ,
       "name": "Github",
       "url": "https://github.com/Boblee24",
-      "username": "This is the Username"
+      "username": "Ayomiposi Aborisade"
     }
   ],
   "projct" : [

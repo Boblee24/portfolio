@@ -13,7 +13,7 @@ const Skills = () => {
   const skills = () => {
     return (
       <motion.div
-        initial={{ opacity: 0, y: "5rem" }}
+        initial={{ opacity: 0, y: "3rem" }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2, duration: 0.5 }}
         className={`grid grid-cols-3 w-full  place-items-center justify-items-between gap-[1rem] ${
@@ -36,15 +36,15 @@ const Skills = () => {
       exit={{ opacity: 0 }}
       id="skills"
     >
-      <div className="flex flex-col w-full h-full items-center justify-between">
+      <div className="flex flex-col w-full h-full items-center ">
        <div
-          className={`bg-[#D7D7D7] z-10 top-[7rem] flex items-center justify-center ${
+          className={`bg-[#D7D7D7] z-10 flex items-center justify-center mb-[2rem] ${
             slide ? "" : "block"
           } left-0 w-full pb-3 m-2`}
         >
         <HeaderAnimation heading={heading}/>
         </div> 
-        <div className="w-full flex justify-center items-center max-w-[700px]">
+        <div className="w-full flex justify-center items-center xii:items-start max-w-[700px]">
           {skills()}
         </div>
       </div>
