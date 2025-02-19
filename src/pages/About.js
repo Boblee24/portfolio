@@ -13,7 +13,7 @@ const About = () => {
   const navigate = useNavigate();
   useEffect(() => {
     if (!slide) {
-      navigate('contact', { spy: true, smooth: true, offset: -70, duration: 500 });
+      navigate('', { spy: true, smooth: true, offset: -70, duration: 500 });
     }
   }, [slide, navigate]);
 

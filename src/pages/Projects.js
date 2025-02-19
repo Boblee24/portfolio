@@ -84,7 +84,7 @@ const Projects = (props) => {
 
   const MyProject = () => {
     return (
-      <div className=" flex flex-col gap-[2rem]">
+      <div className=" flex flex-col gap-[3rem]">
         {props.myProjects.map((myProject) => (
           <MyProjectItem key={myProject.id} myProject={myProject} />
         ))}
@@ -93,7 +93,7 @@ const Projects = (props) => {
   };
 
   return (
-    <div id="project" className="pt-[5rem]">
+    <div id="project" className="pt-[2.5rem]">
       <div
         className={`bg-[#D7D7D7] z-10 top-[7rem] flex items-center p-2 justify-center  ${
           slide ? "" : "block"

@@ -15,7 +15,18 @@ const Preload = ({ onLoadingComplete }) => {
   }, [onLoadingComplete]);
 
   return (
-    <div className={`preload-container ${loading ? "loading" : "loaded"}`}>
+    <div 
+      className={`preload-container ${loading ? "loading" : "loaded"}`}
+      style={{ 
+        pointerEvents: loading ? "auto" : "none",
+        position: "fixed",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        zIndex: 9999
+      }}
+    >
       <div className="preload-overlay"></div>
       <div className="preload-content">
         <div className="escape text-[1.35rem]">Not your</div>

@@ -14,7 +14,7 @@ import Sidebar from "./components/Sidebar";
 import { createContext, useState, useEffect } from "react";
 import LanguagesArray from "./data.json";
 import Preload from "./pages/Preload";
-
+import Resume from "./pages/Resume";
 export const AppContext = createContext();
 function App() {
   const location = useLocation();
@@ -82,6 +82,7 @@ function App() {
               <Route path="skills" key="Skills" element={<Skills />} />
               <Route path="about" element={<About />} />
               <Route path="contact" element={<Contact />} />
+              <Route path="resume" element={<Resume />} />
               <Route
                 path="projects"
                 element={<Projects myProjects={myProjects} />}
@@ -94,6 +95,7 @@ function App() {
               <About />
               <Skills />
               <Projects myProjects={myProjects} />
+              <Resume />
               <Contact />
             </div>
           )}

@@ -39,7 +39,7 @@ const Header = () => {
                 to="/"
                 spy={true}
                 smooth={true}
-                offset={-70}
+                offset={-20}
                 duration={500}
               >
                 Home
@@ -62,7 +62,7 @@ const Header = () => {
                 to="about"
                 spy={true}
                 smooth={true}
-                offset={-70}
+                offset={-20}
                 duration={500}
               >
                 Profile
@@ -82,7 +82,7 @@ const Header = () => {
                 to="skills"
                 spy={true}
                 smooth={true}
-                offset={-70}
+                offset={-20}
                 duration={500}
               >
                 Skills
@@ -101,10 +101,29 @@ const Header = () => {
                 to="project"
                 spy={true}
                 smooth={true}
-                offset={-70}
+                offset={-20}
                 duration={500}
               >
                 Projects
+              </ScrollLink>
+            )}
+          </li>
+          <li>
+            {slide ? (
+              <NavLink onClick={toggleClick} className="" to="/resume">
+                Resume
+              </NavLink>
+            ) : (
+              <ScrollLink
+                onClick={toggleClick}
+                className=""
+                to="resume"
+                spy={true}
+                smooth={true}
+                offset={-20}
+                duration={500}
+              >
+                Resume
               </ScrollLink>
             )}
           </li>
@@ -120,7 +139,7 @@ const Header = () => {
                 to="contact"
                 spy={true}
                 smooth={true}
-                offset={-70}
+                offset={-20}
                 duration={500}
               >
                 Contact
