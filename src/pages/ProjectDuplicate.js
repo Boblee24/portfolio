@@ -55,7 +55,7 @@ const Projects = (props) => {
               </h3>
               <div className="flex gap-7 my-6 ">
                 <Link target="_blank" to={myProject.url} className="text-[1.5rem]">
-                  Demo
+                  Link
                 </Link>
                 <Link target="_blank" to={myProject.url} className="flex items-center gap-2">
                   <FaGithub size={25} />
