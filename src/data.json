@@ -105,57 +105,56 @@
   ],
   "projct" : [
     {
-      "id":1,
-      "img": "about.png",
-      "sideimg" : "tradiant.png",
-      "stack" :"tailwindcss" ,
-      "name": "Tradiant",
-      "github" : "https://github.com/Boblee24/coinhub",
-      "url": "https://tangent-ayomi.netlify.app",
-      "description": "Dynamic stock tracking app with real-time data, blog insights, and user-friendly tools for informed investment decisions"
-
-    },
-    {
-      "id":3,
-      "img": "quizzical.png",
-      "sideimg" : "quizzical.png",
-      "stack" :"tailwindcss" ,
-      "name": "Quizzical",
-      "github" : "https://github.com/Boblee24/quiziccal",
-      "url": "https://bob-quizzify.netlify.app/",
-      "description": " Engaging quiz app for knowledge enthusiasts. Features diverse categories, scoring, and interactive challenges for an entertaining learning experience."
-    },
-    {
-      "id":4,
-      "img": "rogue.png",
-      "sideimg" : "rogue.png",
-      "stack" :"tailwindcss" ,
-      "name": "Rogue Clone",
-      "languagesArray" : ["HTML", "CSS", "React.JS"],
-      "github" : "https://github.com/Boblee24/Rogue",
-      "url": "https://ayomi-rogue.netlify.app/",
-      "description": " Engaging quiz app for knowledge enthusiasts. Features diverse categories, scoring, and interactive challenges for an entertaining learning experience."
-    },
-    {
-      "id":5,
-      "img": "bookmark.png",
-      "sideimg" : "bookmark.png",
-      "stack" :"tailwindcss" ,
-      "name": "Bookmark",
-      "languagesArray" : ["HTML", "CSS", "React.JS"],
-      "github" : "https://github.com/Boblee24/Bookmark.github.io",
-      "url": "https://ayo-bookmark.netlify.app/",
-      "description": " Engaging quiz app for knowledge enthusiasts. Features diverse categories, scoring, and interactive challenges for an entertaining learning experience."
-    },
-    {
-      "id":2,
-      "img": "about.png",
-      "sideimg" : "tradiant.png",
-      "stack" :"tailwindcss" ,
-      "name": "Quizzical",
-      "github" : "https://github.com/Boblee24/quiziccal",
-      "url": "https://bob-quizzify.netlify.app/",
-      "description": " Engaging quiz app for knowledge enthusiasts. Features diverse categories, scoring, and interactive challenges for an entertaining learning experience."
-    }
+    "id": 1,
+    "img": "magent.png",
+    "sideimg": "magent.png",
+    "stack": "React, TailwindCSS, AI/ML, Next Js, Typescript",
+    "name": "Magent",
+    "github": "https://github.com/Boblee24",
+    "url": "https://hellomagent.com/",
+    "description": "Magent is an innovative AI-powered marketing assistant designed to revolutionize how businesses approach marketing strategy, data analysis.... "
+  },
+  {
+    "id": 2,
+    "img": "tradiant.png",
+    "sideimg": "tradiant.png",
+    "stack": "React, TailwindCSS, API Integration",
+    "name": "Tradiant",
+    "github": "https://github.com/Boblee24/coinhub",
+    "url": "https://tangent-ayomi.netlify.app",
+    "description": "Dynamic stock tracking app with real-time data, blog insights, and user-friendly tools for informed investment decisions"
+  },
+  {
+    "id": 3,
+    "img": "quizzical.png",
+    "sideimg": "quizzical.png",
+    "stack": "React, TailwindCSS, JavaScript",
+    "name": "Quizzical",
+    "github": "https://github.com/Boblee24/quiziccal",
+    "url": "https://bob-quizzify.netlify.app/",
+    "description": "Engaging quiz app for knowledge enthusiasts. Features diverse categories, scoring, and interactive challenges for an entertaining learning experience."
+  },
+  {
+    "id": 4,
+    "img": "rogue.png",
+    "sideimg": "rogue.png",
+    "stack": "HTML, CSS, React.JS",
+    "name": "Rogue Clone",
+    "languagesArray": ["HTML", "CSS", "React.JS"],
+    "github": "https://github.com/Boblee24/Rogue",
+    "url": "https://ayomi-rogue.netlify.app/",
+    "description": "Modern web application clone with responsive design and interactive user interface elements."
+  },
+  {
+   "img": "bookmark.png",
+    "sideimg": "bookmark.png",
+    "stack": "HTML, CSS, React.JS",
+    "name": "Bookmark",
+    "languagesArray": ["HTML", "CSS", "React.JS"],
+    "github": "https://github.com/Boblee24/Bookmark.github.io",
+    "url": "https://ayo-bookmark.netlify.app/",
+    "description": "Elegant bookmark management application with intuitive design and seamless user experience."
+  }
+    
   ]
 }
