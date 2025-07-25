@@ -1,7 +1,5 @@
 import { useRef, useEffect, useState, useContext } from "react";
 import { FaGithub, FaExternalLinkAlt, FaCode } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import { TbLivePhoto } from "react-icons/tb";
 import HeaderAnimation from "../components/HeaderAnimation";
 import { AppContext } from "../App";
 
