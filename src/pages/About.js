@@ -52,10 +52,10 @@ const About = () => {
                   <span className="font-[Poppins] font-semibold">
                     Aborisade Ayomiposi
                   </span>
-                  , an experienced frontend developer with a strong skill set in
+                  , an experienced software engineer with a strong skill set in
                   HTML, CSS, JavaScript, TypeScript, Next.js, React.Js,
                   React-Query, Neon db, Redux-toolkit, Webpack, and a vast list
-                  of Frontend-related libraries_
+                  of modern development libraries and frameworks_
                 </p>
               </div>
               <div>

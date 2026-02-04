@@ -31,7 +31,7 @@ const Preload = ({ onLoadingComplete }) => {
       <div className="preload-content">
         <div className="escape text-[1.35rem]">Not your</div>
         <div className="experience text-[1.35rem]">
-          <span>Regular Frontend Dev</span>
+          <span>Software Engineer</span>
         </div>
       </div>
     </div>
