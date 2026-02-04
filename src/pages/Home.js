@@ -60,7 +60,7 @@ const Home = () => {
                 ABORISADE AYOMIPOSI
               </h1>
               <h2 className="text-[1.2rem] xxdm:text-[2.5rem]">
-                A Frontend Web Developer
+                A Software Engineer
               </h2>
             </div>
             <div className="cursor-pointer">
