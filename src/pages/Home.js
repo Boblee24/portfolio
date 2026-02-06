@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
-import myImage2 from "../assts/ayomi.png";
+import myImage2 from "../assts/typeeeee.png";
 import { useNavigate } from "react-router-dom";
 import { AppContext } from "../App";
 
