@@ -52,24 +52,17 @@ const About = () => {
                   <span className="font-[Poppins] font-semibold">
                     Aborisade Ayomiposi
                   </span>
-                  , an experienced software engineer with a strong skill set in
-                  HTML, CSS, JavaScript, TypeScript, Next.js, React.Js,
-                  React-Query, Neon db, Redux-toolkit, Webpack, and a vast list
-                  of modern development libraries and frameworks_
+                  , a passionate full-stack software engineer with expertise in both frontend and backend development. On the frontend, I excel with HTML, CSS, JavaScript, TypeScript, React.js, Next.js, React-Query, Redux-toolkit, and Webpack. On the backend, I build robust APIs and server-side applications using Node.js, Express.js, and modern development practices to create scalable, secure solutions_
                 </p>
               </div>
               <div>
-                <h1 className="font-semibold text-[1.2rem]">Development</h1>
+                <h1 className="font-semibold text-[1.2rem]">Full-Stack Development</h1>
                 <p
                   className={`text-[.9rem] xii:text-[1rem] p-1 ${
                     slide ? "" : "mt-0"
                   } font-[Poppins] xxxdm:leading-[1.7rem] `}
                 >
-                  I focus on building efficient, scalable, and maintainable
-                  codebases with attention to detail. Whether it's crafting
-                  dynamic interfaces, integrating APIs, or optimizing
-                  performance, I aim to create solutions that are clean,
-                  reliable, and future-proof_
+                  I specialize in end-to-end application development, from crafting dynamic, responsive user interfaces to designing and implementing robust backend systems. On the frontend, I focus on building efficient, scalable codebases with attention to detail—whether it's creating engaging interfaces, integrating APIs, or optimizing performance. On the backend, I develop secure, scalable APIs and server-side solutions using Node.js and Express.js, ensuring clean code and best practices across the entire stack_
                 </p>
               </div>
               <div className="font-semibold text-[1.2rem]">Collaboration</div>
