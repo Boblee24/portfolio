@@ -16,7 +16,7 @@ const Resume = () => {
         "Integrated AI-based content generation APIs to enable automated proposal drafting and real-time content refinement.",
         "Worked alongside backend and AI contributors to optimize API integration and UX performance."
       ],
-      link: "LINK"
+      link: "https://grantwriteai.com/"
     },
     {
       title: "Frontend Engineer",
@@ -28,7 +28,7 @@ const Resume = () => {
         "Collaborated closely with backend and AI teams to optimize API response handling and data flow for dynamic content customization.",
         "Collaborated with backend and AI teams to integrate GPT-based content APIs with seamless UX."
       ],
-      link: "LINK"
+      link: "https://dashboard.carbonnote.ai/"
     },
     {
       title: "Software Engineer",
@@ -40,7 +40,7 @@ const Resume = () => {
         "Developed reusable UI components and integrated backend APIs to support milestone-based contract and payment workflows.",
         "Collaborated with cross-functional teams to optimize API integration, data flow, and overall system performance."
       ],
-      link: "LINK"
+      link: "https://www.aegorapay.com/"
     },
     {
       title: "Frontend Engineer",
@@ -78,7 +78,7 @@ const Resume = () => {
           <HeaderAnimation heading={heading} />
         </div>
 
-        <div className="flex flex-col items-center px-4 xii:px-9 max-w-6xl mx-auto w-full">
+        <div className="flex flex-col items-center px-4 xii:px-9 max-w-6xl mx-auto w-full pb-16 md:pb-20">
           {/* Professional Summary */}
           <motion.div
             className="w-full mb-12"
@@ -86,7 +86,7 @@ const Resume = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">PROFESSIONAL SUMMARY</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">PROFESSIONAL SUMMARY</h2>
             <motion.div
               className="bg-gradient-to-br from-blue-50 via-purple-50 to-slate-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
               whileHover={{ y: -5 }}
@@ -102,7 +102,7 @@ const Resume = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.6 }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">SKILLS</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-4">SKILLS</h2>
             <motion.div
               className="bg-gradient-to-br from-blue-50 via-purple-50 to-slate-100 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 space-y-4 grid grid-cols-1 md:grid-cols-2 gap-6"
               whileHover={{ y: -5 }}
@@ -149,7 +149,7 @@ const Resume = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-8">PROFESSIONAL EXPERIENCE</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-8">PROFESSIONAL EXPERIENCE</h2>
 
             <div className="relative">
               {/* Timeline line - hidden on mobile */}
@@ -174,7 +174,7 @@ const Resume = () => {
                         <h3 className="text-lg md:text-xl font-bold text-gray-800 mb-1">{exp.title}</h3>
                         <p className="text-purple-600 font-semibold mb-1 text-sm md:text-base">
                           {exp.company}
-                          {exp.link && <span className="ml-2 text-blue-500 cursor-pointer hover:underline text-xs md:text-sm">{exp.link}</span>}
+                          {exp.link && <a href={exp.link} target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-500 cursor-pointer hover:underline text-xs md:text-sm">Visit Site</a>}
                         </p>
                         <p className="text-gray-600 text-xs md:text-sm mb-3">{exp.location}</p>
                         <ul className="text-gray-700 text-xs md:text-sm space-y-2">

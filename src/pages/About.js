@@ -1,9 +1,10 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Link as ScrollLink } from "react-scroll";
 import { AppContext } from "../App";
 import HeaderAnimation from "../components/HeaderAnimation";
 import myImage2 from "../assts/ayomiposi4.jpg"
+import mobileImage from "../assts/typeeeee.png"
 import { useNavigate } from "react-router-dom";
 
 
@@ -11,11 +12,24 @@ const About = () => {
   const heading = "My Profile";
   const { slide } = useContext(AppContext);
   const navigate = useNavigate();
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   useEffect(() => {
     if (!slide) {
       navigate('', { spy: true, smooth: true, offset: -70, duration: 500 });
     }
   }, [slide, navigate]);
+
+  const displayImage = isMobile ? mobileImage : myImage2;
 
   return (
     <motion.div
@@ -34,7 +48,7 @@ const About = () => {
         <div className="flex flex-col xii:flex-row gap-3 xii:gap-[10%] xii:p-9">
           <div className=" relative my-3 xii:ml-4 flex-1 xii:max-w-[300px] xii:max-h-[400px] xii:after:absolute xii:after:w-full xii:after:h-full xii:after:bg-[#313131] xii:after:top-[2rem] xii:after:left-[-2rem] xii:after:rounded-[1rem] xii:after:z-[-1]">
             <img
-              src={myImage2}
+              src={displayImage}
               alt=""
               className=" rounded-lg w-full h-full object-cover"
             />

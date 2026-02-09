@@ -139,21 +139,21 @@ const Projects = (props) => {
   };
 
   return (
-    <div id="project" className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 py-16">
+    <div id="project" className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 py-8 md:py-16">
       {/* Header Section */}
-      <div className={`sticky top-8 z-10 bg-gray-100/80 backdrop-blur-md border-b border-gray-200 transition-all duration-500 ${slide ? 'translate-y-0' : '-translate-y-full'}`}>
-        <div className="container mx-auto px-6 py-6">
+      <div className={`sticky top-8 md:top-12 z-10 bg-gray-100/80 backdrop-blur-md border-b border-gray-200 transition-all duration-500 ${slide ? 'translate-y-0' : '-translate-y-full'}`}>
+        <div className="container mx-auto px-4 md:px-6 py-4 md:py-6">
           <HeaderAnimation heading={heading} />
-          <p className="text-gray-600 mt-4 text-lg max-w-2xl">
-            A collection of projects showcasing my expertise in modern web development, 
+          <p className="text-gray-600 mt-2 md:mt-4 text-sm md:text-lg max-w-2xl">
+            A collection of projects showcasing my expertise in modern web development,
             from AI-powered applications to dynamic user interfaces.
           </p>
         </div>
       </div>
 
       {/* Projects Grid */}
-      <div className="container mx-auto px-6 mt-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+      <div className="container mx-auto px-4 md:px-6 mt-8 md:mt-12 pb-8 md:pb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 max-w-7xl mx-auto">
           {props.myProjects.map((project) => (
             <ProjectItem key={project.id} myProject={project} />
           ))}
@@ -161,15 +161,15 @@ const Projects = (props) => {
       </div>
 
       {/* Bottom Section */}
-      <div className="container mx-auto px-6 mt-16 text-center">
-        <div className="bg-gradient-to-r from-gray-800 to-gray-600 text-white rounded-2xl p-8">
-          <h3 className="text-2xl font-bold mb-4">Interested in collaborating?</h3>
-          <p className="text-gray-200 mb-6">
+      <div className="container mx-auto px-4 md:px-6 mt-12 md:mt-16 text-center pb-8 md:pb-16">
+        <div className="bg-gradient-to-r from-gray-800 to-gray-600 text-white rounded-2xl p-6 md:p-8">
+          <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">Interested in collaborating?</h3>
+          <p className="text-gray-200 mb-4 md:mb-6 text-sm md:text-base">
             I'm always open to discussing new opportunities and innovative projects.
           </p>
-          <a 
+          <a
             href="#contact"
-            className="inline-block bg-white text-gray-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+            className="inline-block bg-white text-gray-800 px-6 md:px-8 py-2 md:py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 text-sm md:text-base"
           >
             Get In Touch
           </a>
