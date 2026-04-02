@@ -105,56 +105,92 @@
   ],
   "projct" : [
     {
-    "id": 1,
-    "img": "magent.png",
-    "sideimg": "magent.png",
-    "stack": "React, TailwindCSS, AI/ML, Next Js, Typescript",
-    "name": "Magent",
-    "github": "https://github.com/Boblee24",
-    "url": "https://hellomagent.com/",
-    "description": "Magent is an innovative AI-powered marketing assistant designed to revolutionize how businesses approach marketing strategy, data analysis.... "
-  },
-  {
-    "id": 2,
-    "img": "tradiant.png",
-    "sideimg": "tradiant.png",
-    "stack": "React, TailwindCSS, API Integration",
-    "name": "Tradiant",
-    "github": "https://github.com/Boblee24/coinhub",
-    "url": "https://tangent-ayomi.netlify.app",
-    "description": "Dynamic stock tracking app with real-time data, blog insights, and user-friendly tools for informed investment decisions"
-  },
-  {
-    "id": 3,
-    "img": "quizzical.png",
-    "sideimg": "quizzical.png",
-    "stack": "React, TailwindCSS, JavaScript",
-    "name": "Quizzical",
-    "github": "https://github.com/Boblee24/quiziccal",
-    "url": "https://bob-quizzify.netlify.app/",
-    "description": "Engaging quiz app for knowledge enthusiasts. Features diverse categories, scoring, and interactive challenges for an entertaining learning experience."
-  },
-  {
-    "id": 4,
-    "img": "rogue.png",
-    "sideimg": "rogue.png",
-    "stack": "HTML, CSS, React.JS",
-    "name": "Rogue Clone",
-    "languagesArray": ["HTML", "CSS", "React.JS"],
-    "github": "https://github.com/Boblee24/Rogue",
-    "url": "https://ayomi-rogue.netlify.app/",
-    "description": "Modern web application clone with responsive design and interactive user interface elements."
-  },
-  {
-   "img": "bookmark.png",
-    "sideimg": "bookmark.png",
-    "stack": "HTML, CSS, React.JS",
-    "name": "Bookmark",
-    "languagesArray": ["HTML", "CSS", "React.JS"],
-    "github": "https://github.com/Boblee24/Bookmark.github.io",
-    "url": "https://ayo-bookmark.netlify.app/",
-    "description": "Elegant bookmark management application with intuitive design and seamless user experience."
-  }
-    
+      "id": 1,
+      "name": "FairSplit",
+      "role": "Solo Project",
+      "img": "fairsplit.png",
+      "sideimg": "fairsplit.png",
+      "stack": ["Next.js", "TypeScript", "Viem", "Base", "USDC", "Solidity"],
+      "description": "Web3 expense splitting dApp on Base mainnet. Sub-$0.01 gas, instant settlement, no seed phrases.",
+      "highlights": [
+        "Deployed on Base mainnet",
+        "Wallet abstraction (no seed phrases)",
+        "2-second USDC settlement",
+        "Solo built, hackathon submission April 30"
+      ],
+      "url": "https://fairsplit-ten.vercel.app/",
+      "github": "https://github.com/Boblee24/fairsplit",
+      "video": "loom-link-here",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "name": "FarmConnect",
+      "role": "Solo Project",
+      "img": "farmconnect.png",
+      "sideimg": "farmconnect.png",
+      "stack": ["Node.js", "Twilio", "WhatsApp API", "Geolocation"],
+      "description": "WhatsApp bot for agricultural price discovery. Helps farmers find buyers and check market prices via chat.",
+      "highlights": [
+        "Real-time price lookup via WhatsApp",
+        "GPS-based seller discovery",
+        "Twilio integration for emerging markets"
+      ],
+      "url": "whatsapp-number-or-demo",
+      "github": "https://github.com/Boblee24/farmconnect",
+      "featured": false
+    },
+    {
+      "id": 3,
+      "img": "magent.png",
+      "sideimg": "magent.png",
+      "stack": "React, TailwindCSS, AI/ML, Next Js, Typescript",
+      "name": "Magent",
+      "github": "https://github.com/Boblee24",
+      "url": "https://hellomagent.com/",
+      "description": "Magent is an innovative AI-powered marketing assistant designed to revolutionize how businesses approach marketing strategy, data analysis.... "
+    },
+    {
+      "id": 4,
+      "img": "tradiant.png",
+      "sideimg": "tradiant.png",
+      "stack": "React, TailwindCSS, API Integration",
+      "name": "Tradiant",
+      "github": "https://github.com/Boblee24/coinhub",
+      "url": "https://tangent-ayomi.netlify.app",
+      "description": "Dynamic stock tracking app with real-time data, blog insights, and user-friendly tools for informed investment decisions"
+    },
+    {
+      "id": 5,
+      "img": "quizzical.png",
+      "sideimg": "quizzical.png",
+      "stack": "React, TailwindCSS, JavaScript",
+      "name": "Quizzical",
+      "github": "https://github.com/Boblee24/quiziccal",
+      "url": "https://bob-quizzify.netlify.app/",
+      "description": "Engaging quiz app for knowledge enthusiasts. Features diverse categories, scoring, and interactive challenges for an entertaining learning experience."
+    },
+    {
+      "id": 6,
+      "img": "rogue.png",
+      "sideimg": "rogue.png",
+      "stack": "HTML, CSS, React.JS",
+      "name": "Rogue Clone",
+      "languagesArray": ["HTML", "CSS", "React.JS"],
+      "github": "https://github.com/Boblee24/Rogue",
+      "url": "https://ayomi-rogue.netlify.app/",
+      "description": "Modern web application clone with responsive design and interactive user interface elements."
+    },
+    {
+      "id": 7,
+      "img": "bookmark.png",
+      "sideimg": "bookmark.png",
+      "stack": "HTML, CSS, React.JS",
+      "name": "Bookmark",
+      "languagesArray": ["HTML", "CSS", "React.JS"],
+      "github": "https://github.com/Boblee24/Bookmark.github.io",
+      "url": "https://ayo-bookmark.netlify.app/",
+      "description": "Elegant bookmark management application with intuitive design and seamless user experience."
+    }
   ]
 }

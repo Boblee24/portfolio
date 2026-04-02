@@ -38,7 +38,11 @@ const Projects = (props) => {
       };
     }, []);
 
-    const stackArray = myProject.stack ? myProject.stack.split(', ') : myProject.languagesArray || [];
+    const stackArray = Array.isArray(myProject.stack)
+      ? myProject.stack
+      : myProject.stack
+        ? myProject.stack.split(", ")
+        : myProject.languagesArray || [];
 
     return (
       <div 
