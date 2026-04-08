@@ -29,8 +29,8 @@ const Preload = ({ onLoadingComplete }) => {
     >
       <div className="preload-overlay"></div>
       <div className="preload-content">
-        <div className="escape text-[1.35rem]">Not your</div>
-        <div className="experience text-[1.35rem]">
+        <div className="escape text-[1.35rem]">Not your regular</div>
+        <div className="experience text-[1.25rem]">
           <span>Software Engineer</span>
         </div>
       </div>
