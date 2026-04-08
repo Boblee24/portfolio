@@ -146,11 +146,10 @@ const Projects = (props) => {
     <div id="project" className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 py-8 md:py-16">
       {/* Header Section */}
       <div className={`sticky top-8 md:top-12 z-10 bg-gray-100/80 backdrop-blur-md border-b border-gray-200 transition-all duration-500 ${slide ? 'translate-y-0' : '-translate-y-full'}`}>
-        <div className="container mx-auto px-4 md:px-6 py-4 md:py-6">
+        <div className="container mx-auto px-4 md:px-6 py-3 md:py-4">
           <HeaderAnimation heading={heading} />
-          <p className="text-gray-600 mt-2 md:mt-4 text-sm md:text-lg max-w-2xl">
-            A collection of projects showcasing my expertise in modern web development,
-            from AI-powered applications to dynamic user interfaces.
+          <p className="text-gray-600 mt-1 md:mt-2 text-sm md:text-base max-w-2xl leading-relaxed">
+            Selected projects across product builds, client work, and interactive web experiences.
           </p>
         </div>
       </div>
