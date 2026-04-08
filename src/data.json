@@ -162,6 +162,24 @@
     },
     {
       "id": 5,
+      "name": "LarrySat Solar",
+      "img": "larrysat.png",
+      "sideimg": "tradiant.png",
+      "type": "client",
+      "featured": false,
+      "role": "Frontend Engineer",
+      "stack": ["Next.js", "TypeScript", "TailwindCSS"],
+      "description": "Portfolio website for Nigerian solar installation company. Project showcase, service details, and lead generation.",
+      "highlights": [
+        "Custom Next.js build",
+        "Project portfolio gallery",
+        "Service-based lead generation"
+      ],
+      "url": "https://larrysat.com.ng/",
+      "github": "private-or-n/a"
+    },
+    {
+      "id": 6,
       "img": "quizzical.png",
       "sideimg": "quizzical.png",
       "stack": "React, TailwindCSS, JavaScript",
@@ -171,7 +189,7 @@
       "description": "Engaging quiz app for knowledge enthusiasts. Features diverse categories, scoring, and interactive challenges for an entertaining learning experience."
     },
     {
-      "id": 6,
+      "id": 7,
       "img": "rogue.png",
       "sideimg": "rogue.png",
       "stack": "HTML, CSS, React.JS",
@@ -182,7 +200,7 @@
       "description": "Modern web application clone with responsive design and interactive user interface elements."
     },
     {
-      "id": 7,
+      "id": 8,
       "img": "bookmark.png",
       "sideimg": "bookmark.png",
       "stack": "HTML, CSS, React.JS",
