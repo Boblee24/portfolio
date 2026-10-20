@@ -1,20 +1,46 @@
-import { useEffect, useState } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 
-export function Reveal({ children, delay = 0, y = 24, className, as = "div" }) {
-  const reduce = useReducedMotion();
-  const Tag = motion[as];
+// One shared observer for every scroll reveal: adds `.in` once, then stops watching.
+const revealer =
+  typeof window !== "undefined" && "IntersectionObserver" in window
+    ? new IntersectionObserver(
+        (entries) => {
+          for (const e of entries) {
+            if (e.isIntersecting) {
+              e.target.classList.add("in");
+              revealer.unobserve(e.target);
+            }
+          }
+        },
+        { rootMargin: "0px 0px -10% 0px" }
+      )
+    : null;
+
+export function Reveal({ children, delay = 0, className = "", as: Tag = "div" }) {
+  const ref = useRef(null);
+  useEffect(() => {
+    const el = ref.current;
+    if (!revealer) return void el.classList.add("in");
+    revealer.observe(el);
+    return () => revealer.unobserve(el);
+  }, []);
   return (
-    <Tag
-      className={className}
-      initial={reduce ? false : { opacity: 0, y }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "0px 0px -10% 0px" }}
-      transition={{ duration: 0.7, delay, ease: [0.22, 1, 0.36, 1] }}
-    >
+    <Tag ref={ref} className={`reveal ${className}`} style={delay ? { transitionDelay: `${delay}s` } : undefined}>
       {children}
     </Tag>
   );
+}
+
+export function useReducedMotion() {
+  const query = "(prefers-reduced-motion: reduce)";
+  const [reduce, setReduce] = useState(() => typeof window !== "undefined" && window.matchMedia(query).matches);
+  useEffect(() => {
+    const mq = window.matchMedia(query);
+    const on = () => setReduce(mq.matches);
+    mq.addEventListener("change", on);
+    return () => mq.removeEventListener("change", on);
+  }, []);
+  return reduce;
 }
 
 export function Arrow({ className = "", diagonal = true }) {

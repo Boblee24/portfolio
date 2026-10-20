@@ -1,36 +1,52 @@
-import { useEffect, useRef } from "react";
-import { useReducedMotion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import { featured } from "../data/content";
-import { Arrow, Reveal, SectionHead, hostOf } from "./ui";
+import { Arrow, Reveal, SectionHead, hostOf, useReducedMotion } from "./ui";
 
 const pad = (n) => String(n).padStart(2, "0");
 
-// Muted looping clip that only plays while on screen. Reduced motion gets the poster.
+// Shows a lazy poster image; the video is only fetched once the frame is near the
+// viewport, plays while visible, pauses when scrolled away. Reduced motion keeps the poster.
 function Clip({ src, poster, label }) {
-  const ref = useRef(null);
+  const box = useRef(null);
+  const vid = useRef(null);
   const reduce = useReducedMotion();
+  const [near, setNear] = useState(false);
+  const [playing, setPlaying] = useState(false);
+
   useEffect(() => {
-    const v = ref.current;
-    if (!v || reduce) return;
+    if (reduce) return;
     const io = new IntersectionObserver(
-      ([e]) => (e.isIntersecting ? v.play().catch(() => {}) : v.pause()),
-      { threshold: 0.25 }
+      ([e]) => {
+        if (e.isIntersecting) {
+          setNear(true);
+          vid.current?.play().catch(() => {});
+        } else {
+          vid.current?.pause();
+        }
+      },
+      { rootMargin: "200px 0px" }
     );
-    io.observe(v);
+    io.observe(box.current);
     return () => io.disconnect();
   }, [reduce]);
+
   return (
-    <video
-      ref={ref}
-      src={src}
-      poster={poster}
-      muted
-      loop
-      playsInline
-      preload={reduce ? "none" : "metadata"}
-      aria-label={label}
-      className="size-full object-cover"
-    />
+    <div ref={box} className="relative size-full">
+      <img src={poster} alt={label} width="1400" height="700" loading="lazy" decoding="async" className="absolute inset-0 size-full object-cover" />
+      {near && !reduce && (
+        <video
+          ref={vid}
+          src={src}
+          muted
+          loop
+          playsInline
+          autoPlay
+          aria-hidden="true"
+          onPlaying={() => setPlaying(true)}
+          className={`absolute inset-0 size-full object-cover transition-opacity duration-500 ${playing ? "opacity-100" : "opacity-0"}`}
+        />
+      )}
+    </div>
   );
 }
 
@@ -64,10 +80,11 @@ function Frame({ project }) {
           <img
             src={project.image}
             alt={`${project.name} screenshot`}
+            width="1400"
+            height="700"
             loading="lazy"
-            className={`size-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.03] ${
-              project.crop ? "object-bottom" : "object-center"
-            }`}
+            decoding="async"
+            className="size-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.03]"
           />
         )}
       </div>

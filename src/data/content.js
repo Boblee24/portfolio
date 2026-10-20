@@ -1,18 +1,20 @@
 // All site copy lives here. Edit this file to update the portfolio.
 
-import fundedgreen from "../assets/projects/fundedgreen.png";
-import azimetra from "../assets/projects/azimetra.png";
+import fundedgreen from "../assets/projects/fundedgreen.webp";
+import azimetra from "../assets/projects/azimetra.webp";
 import azimetraVideo from "../assets/projects/azimetra-hero.webm";
-import fairsplit from "../assets/projects/fairsplit.png";
-import magent from "../assets/projects/magent.png";
-import larrysat from "../assets/projects/larrysat.png";
-import farmconnect from "../assets/projects/farmconnect.png";
-import tradiant from "../assets/projects/tradiant.png";
-import quizzical from "../assets/projects/quizzical.png";
-import rogue from "../assets/projects/rogue.png";
-import bookmark from "../assets/projects/bookmark.png";
-// Swap this file (any size or ratio) to change the photo on the site.
-import portrait from "../assets/portrait.jpg";
+import fairsplit from "../assets/projects/fairsplit.webp";
+import fairsplitVideo from "../assets/projects/fairsplit-hero.webm";
+import magent from "../assets/projects/magent.webp";
+import larrysat from "../assets/projects/larrysat.webp";
+import larrysatVideo from "../assets/projects/larrysat-hero.webm";
+import farmconnect from "../assets/projects/farmconnect.webp";
+import tradiant from "../assets/projects/tradiant.webp";
+import quizzical from "../assets/projects/quizzical.webp";
+import rogue from "../assets/projects/rogue.webp";
+import bookmark from "../assets/projects/bookmark.webp";
+// Swap this file to change the photo on the site (export it around 800x1000, WebP or JPG).
+import portrait from "../assets/portrait.webp";
 
 export const profile = {
   name: "Ayomiposi Aborisade",
@@ -33,7 +35,7 @@ export const socials = [
 ];
 
 // `video` (optional) plays a muted loop in place of the image; `image` is then its poster.
-// `crop: true` trims the browser tab bar off screenshots taken with it visible.
+// Featured images are 1400x700 WebP (2:1). Archive thumbnails are 240x150.
 export const featured = [
   {
     name: "FundedGreen Capital",
@@ -41,7 +43,7 @@ export const featured = [
     role: "Engine architect",
     pitch: "A prop-trading platform for Nigerian traders, with a risk engine I wrote in Go.",
     body:
-      "Traders buy a challenge account, trade live market prices in the browser, and lose the account the moment they breach a drawdown limit. It is a two-person build: I own the Go engine, the Next.js trading terminal and the overall architecture, and a teammate owns the NestJS API.",
+      "Traders buy a challenge account, trade live market prices in the browser, and lose the account the moment they breach a drawdown limit. It is a two-person build: I own the Go engine, the Next.js trading terminal and the overall architecture, and work on the NestJS API alongside the teammate who leads it.",
     points: [
       "Go engine checks every open account against live ticks and reports breaches to the API, with retries and a lock so nothing trades after a breach.",
       "Streams real FX, metals and index prices into Redis, and refuses to fill on stale quotes or abnormally wide spreads.",
@@ -79,7 +81,7 @@ export const featured = [
     body:
       "Split trips, rent or dinners with anyone, anywhere. Balances settle onchain in about two seconds, and people connect with a wallet instead of handling seed phrases.",
     points: [
-      "Deployed on Base mainnet with sub-cent gas per settlement.",
+      "Live demo on Base Sepolia testnet, built for about a cent of gas per settlement on Base.",
       "Non-custodial: users always hold their own funds.",
     ],
     stack: ["Next.js", "TypeScript", "Viem", "Solidity", "Base"],
@@ -87,8 +89,8 @@ export const featured = [
       { label: "Live site", href: "https://fairsplit-ten.vercel.app/" },
       { label: "Code", href: "https://github.com/Boblee24/fairsplit" },
     ],
-    image: fairsplit,
-    crop: true,
+    image: fairsplit, // poster frame
+    video: fairsplitVideo,
   },
   {
     name: "Magent",
@@ -100,7 +102,6 @@ export const featured = [
     stack: ["Next.js", "TypeScript", "React", "Node.js", "MongoDB", "Tailwind"],
     links: [{ label: "Live site", href: "https://hellomagent.com/" }],
     image: magent,
-    crop: true,
   },
   {
     name: "LarrySat Solar",
@@ -111,8 +112,8 @@ export const featured = [
     points: [],
     stack: ["Next.js", "TypeScript", "Tailwind"],
     links: [{ label: "Live site", href: "https://larrysat.com.ng/" }],
-    image: larrysat,
-    crop: true,
+    image: larrysat, // poster frame
+    video: larrysatVideo,
   },
   {
     name: "FarmConnect",
@@ -124,7 +125,6 @@ export const featured = [
     stack: ["Node.js", "Twilio", "WhatsApp API"],
     links: [{ label: "Code", href: "https://github.com/Boblee24/farmconnect" }],
     image: farmconnect,
-    crop: true,
   },
 ];
 
@@ -170,7 +170,7 @@ export const experience = [
     role: "Engine Architect",
     period: "2026 —",
     points: [
-      "Designed the system architecture and wrote the Go risk engine, the price feed and the Next.js trading terminal.",
+      "Designed the system architecture and wrote the Go risk engine, the price feed and the Next.js trading terminal, and contributed to the NestJS API.",
       "Built the price-safety checks that keep orders from filling on bad market data.",
     ],
   },

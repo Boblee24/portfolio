@@ -17,7 +17,7 @@ export default function Archive() {
               className="group grid grid-cols-[auto_1fr_auto] items-center gap-4 py-4 sm:grid-cols-[96px_minmax(0,1.2fr)_minmax(0,1fr)_auto] sm:gap-8"
             >
               <span className="hidden aspect-[16/10] w-24 overflow-hidden rounded-[4px] border border-line bg-paper-2 sm:block">
-                <img src={p.image} alt="" loading="lazy" className="size-full object-cover object-bottom grayscale transition duration-500 group-hover:grayscale-0" />
+                <img src={p.image} alt="" width="240" height="150" loading="lazy" decoding="async" className="size-full object-cover grayscale transition duration-500 group-hover:grayscale-0" />
               </span>
               <span className="font-serif text-2xl leading-none sm:text-3xl">{p.name}</span>
               <span className="hidden text-[15px] text-ink/70 sm:block">
