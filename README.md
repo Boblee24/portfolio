@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Ayomiposi Aborisade — Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Personal site for Ayomiposi Aborisade, software engineer. A single page with selected work, experience, about and contact sections.
 
-## Available Scripts
+**Stack:** React 18 · Vite 6 · Tailwind CSS v4 · Framer Motion. Deployed on Netlify.
 
-In the project directory, you can run:
+## Run it
 
-### `npm start`
+```bash
+npm install
+npm run dev       # http://localhost:5173
+npm run build     # outputs to ./build
+npm run preview   # serve the production build
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Editing content
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+All copy lives in [`src/data/content.js`](src/data/content.js):
 
-### `npm test`
+| Export       | What it controls                                          |
+| ------------ | --------------------------------------------------------- |
+| `profile`    | Name, role, email, résumé path, photo, availability badge |
+| `featured`   | The numbered "Selected work" case studies                 |
+| `archive`    | The compact "Earlier projects" list                       |
+| `experience` | The experience timeline                                   |
+| `toolbox`    | The grouped skills under About                            |
+| `socials`    | Links in the contact footer                               |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Change the photo:** replace `src/assets/portrait.jpg`. Any size or ratio works, because it is cropped to 4:5.
+- **Add a project:** drop a screenshot in `src/assets/projects/`, import it at the top of `content.js`, and add an entry. Set `crop: true` if the screenshot includes the browser tab bar.
+- **Résumé:** `profile.resume` points to a file in `public/`.
 
-### `npm run build`
+## Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+src/
+  components/   Nav, Hero, Work, Archive, Experience, About, Contact, ui (shared bits)
+  data/         content.js — all site copy
+  assets/       portrait + project screenshots
+  index.css     Tailwind v4 theme tokens (colours, fonts) and small utilities
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Design tokens (paper, ink, accent, fonts) are defined in the `@theme` block in `src/index.css`.
