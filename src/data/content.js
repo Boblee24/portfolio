@@ -31,7 +31,7 @@ export const profile = {
 export const socials = [
   { label: "GitHub", href: "https://github.com/Boblee24" },
   { label: "LinkedIn", href: "https://www.linkedin.com/in/ayomiposi24/" },
-  { label: "X / Twitter", href: "https://twitter.com/BOBLEE_AYO" },
+  { label: "X / Twitter", href: "https://x.com/Ayomi_devv" },
 ];
 
 // `video` (optional) plays a muted loop in place of the image; `image` is then its poster.
