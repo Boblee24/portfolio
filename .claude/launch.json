@@ -6,6 +6,12 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev", "--", "--port", "5173", "--strictPort"],
       "port": 5173
+    },
+    {
+      "name": "flare-monitor",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "../flare-monitor", "run", "dev"],
+      "port": 3001
     }
   ]
 }
