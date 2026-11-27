@@ -55,7 +55,7 @@ export default function Hero() {
               alt={`Portrait of ${profile.name}`}
               width="800"
               height="1000"
-              fetchPriority="high"
+              fetchpriority="high"
               decoding="async"
               className="aspect-[4/5] w-full object-cover object-[50%_30%] grayscale-[35%] transition duration-700 hover:grayscale-0"
             />

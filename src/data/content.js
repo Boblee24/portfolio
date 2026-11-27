@@ -51,7 +51,7 @@ export const featured = [
       "Trading terminal on TradingView Lightweight Charts with candle history and live floating P&L.",
     ],
     stack: ["Go", "gRPC", "Redis", "PostgreSQL", "NestJS", "Next.js", "Tailwind"],
-    links: [],
+    links: [{ label: "Live site", href: "https://fundedgc.com/" }],
     note: "Private codebase",
     image: fundedgreen,
     tone: "dark",
